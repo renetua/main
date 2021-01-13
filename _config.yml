@@ -49,14 +49,6 @@ markdown: kramdown
 kramdown:
   auto_ids: false
 
-collections:
-  stabs:
-    output: true
-  otabs:
-    output: true
-  owners:
-    output: true
-
 defaults:
   - scope:
       path: /*/data/*.json
