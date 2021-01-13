@@ -1,2 +1,2 @@
 # Main Template
-HTML/CSS/JS/Template New
+HTML/CSS/JS/Template
