@@ -3,13 +3,7 @@
 #
 - type: region
   item: ivano-frankivska
-  name: Нерухомість у Івано-Франківській о́бласті
-  address: 76018, м. Івано-Франківськ, вул.&nbsp;Січових&nbsp;Стрільців,&nbsp;56
-  phone_main: 380504949649
-  phone_hot: 380974949649
-  phone_fax: 380504949649
-  email: info@realestate.net.ua
-  www: https://www.realestate.net.ua/
+  name: Нерухомість у області
 
 #
 # District
