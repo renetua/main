@@ -1,0 +1,101 @@
+baseurl: ''
+domain: realestate.net.ua
+url: 'https://www.realestate.net.ua'
+
+encoding: UTF-8
+lang: uk_UA
+timezone: Europe/Kyiv
+country: Україна
+region: Україна
+region_size: .89rem
+
+usd: 28.25
+eur: 34.38
+
+title: Мережа Вебсайтів Нерухомості
+keywords: житло, квартира, нерухомість прикарпаття, продам будинок, продаю гараж, продаємо житло, здається квартира, продаж житла, оренда квартир, квартира подобово, продати будинок, продамо землю, земля продається, продаю квартиру, здаю житло
+description: Безкоштовні оголошення про купівлю-продаж і оренду квартир, будинків, землі та інших об'єктів нерухомості, які будуються, продаються або передаються в оренду в межах Івано-Франківської області.
+name: Регіональна нерухомість
+brand: Нерухомість
+logo: '/assets/images/logo.svg'
+
+author:
+  name: Vasyl&nbsp;Mosiychuk
+  website: http://www.vasyl.net
+  email: info@vasyl.net
+developer:
+  name: vasyl.net
+  website: http://www.vasyl.net
+  email: info@vasyl.net
+
+contact:
+  name: Мережа Вебсайтів Нерухомості в&nbsp;Україні
+  address: 76018, м. Івано-Франківськ, вул.&nbsp;Січових&nbsp;Стрільців,&nbsp;56
+  phone_main: 380974949649
+  phone_hot: 380974949649
+  phone_fax: 380974949649
+  phone_sms: 380504949649
+  phone_advert: 380504949649
+  phone_buy_sell: 380974949649
+  phone_add_ads: 380504949649
+  phone_submit_ads: 380504949649
+  phone_support: 380504949649
+  phone_buy: 380974949649
+  phone_sell: 380974949649
+  email: info@realestate.net.ua
+  www: https://www.realestate.net.ua/
+
+markdown: kramdown
+kramdown:
+  auto_ids: false
+
+collections:
+  stabs:
+    output: true
+  otabs:
+    output: true
+  owners:
+    output: true
+
+defaults:
+  - scope:
+      path: /*/data/*.json
+    values:
+      layout: "null"
+      sitemap: false
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: /*/news/
+      type: "news"
+    values:
+      layout: "news"
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate-v2
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: [""]
+  endings: all
+  ignore:
+    envs: []
+  blanklines: false
+  profile: false
+  startings: [html, head, body]

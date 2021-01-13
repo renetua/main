@@ -1,0 +1,51 @@
+//
+// Variables
+
+@import "functions";
+@import "variables";
+@import "mixins";
+//
+// Import needed Bootstrap Files
+//
+@import "../bootstrap/bootstrap";
+//
+// Components
+//
+@import "fonts";
+@import "reboot";
+@import "header";
+@import "navbar";
+@import "nav-tabs";
+@import "card";
+@import "breadcrumb";
+@import "badge";
+@import "buttons";
+@import "text";
+@import "carousel";
+@import "border-width";
+@import "misc";
+
+//
+// Helpers
+//
+@import "helpers";
+//
+// Plugins
+//
+@import "photoswipe";
+@import "pagination";
+// @import "leaflet";
+
+body {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
