@@ -5,32 +5,32 @@
   item: ivano-frankivska
   name: Нерухомість у Івано-Франківській о́бласті
   address: 76018, м. Івано-Франківськ, вул.&nbsp;Січових&nbsp;Стрільців,&nbsp;56
-  phone_main: 380974949649
+  phone_main: 380504949649
   phone_hot: 380974949649
-  phone_fax: 380974949649
-  email: info@realestate.if.ua
-  www: https://www.realestate.if.ua/
+  phone_fax: 380504949649
+  email: info@realestate.net.ua
+  www: https://www.realestate.net.ua/
 
 #
 # District
 #
 - type: district
   item: ivano-frankivskyy
-  name: Нерухомість у Івано-Франківському районі
+  name: Нерухомість у районі
 
 #
 # District / Town
 #
 - type: town
   item: tysmenytsya
-  name: Нерухомість у місті Тисмениця
+  name: Нерухомість у містечку
 
 #
 # Region / City
 #
 - type: city
   item: ivano-frankivsk
-  name: Нерухомість у місті Івано-Франківськ
+  name: Нерухомість у місті
 
 #
 # Developers / Company
@@ -38,40 +38,14 @@
 
 - type: developer
   item: builder
-  name: Будівельна компанія "Будівельник"
+  name: Будівельна компанія
 
 #
 # Realtor / Agent
 #
 - type: realtor
   item: mykhalchuk
-  name: Агент з нерухомості Володимир&nbsp;Михальчук
-  address: 76018, м. Івано-Франківськ, вул.&nbsp;Січових&nbsp;Стрільців,&nbsp;56
-  phone_main: 380974949649
-  phone_hot: 380974949649
-  phone_fax: 380974949649
-  email: vova@realestate.net.ua
-  www: https://www.realestate.if.ua/
-
-- type: realtor
-  item: mosiychuk
-  name: Продаж квартир в&nbsp;Івано-Франківську
-  address: 76018, м. Івано-Франківськ, вул.&nbsp;Січових&nbsp;Стрільців,&nbsp;56
-  phone_main: 380504949649
-  phone_hot: 380504949649
-  phone_fax: 380504949649
-  email: info@realestate.if.ua
-  www: https://www.realestate.if.ua/
-
-- type: realtor
-  item: pashchak
-  name: Агент з нерухомості Олег&nbsp;Пащак
-  address: 76018, м. Івано-Франківськ, вул.&nbsp;Січових&nbsp;Стрільців,&nbsp;56
-  phone_main: 380979483355
-  phone_hot: 380979483355
-  phone_fax: 380979483355
-  email: info@realestate.if.ua
-  www: https://www.realestate.if.ua/
+  name: Агент з нерухомості
 
 #
 # Agency
