@@ -7,6 +7,6 @@ $(document).ready(function(){ $('.toast').toast('show'); $('.alert').alert(); })
 let isVnUa = document.getElementById('vn-ua').innerHTML === "";
 if (isVnUa) {
   document.getElementById('vn-ua').innerHTML = "<p>Вебсайт www.realestate.vn.ua ще тільки будується...</p>";
-  document.getElementsByClassName('vn-ua-btn').style.display = 'none';
+  document.getElementsByClassName('vn-ua-btn')[0].className = "d-none";
 }
 });
