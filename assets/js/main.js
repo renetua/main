@@ -2,6 +2,7 @@
 layout: null
 sitemap: false
 ---
+
 {%- include js/jquery.min.js -%}
 {%- include js/popper.min.js -%}
 {%- include js/bootstrap.min.js -%}
@@ -10,3 +11,4 @@ sitemap: false
 {%- include js/bootstrap.lightbox.min.js -%}
 {%- include js/bootstrap.smoothscroll.min.js -%}
 {%- include js/renetua.js -%}
+{%- include js/if-ua.home.js -%}
