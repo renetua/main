@@ -41,7 +41,7 @@ navhide: 1
             <div class="tab-content" id="{{ region }}-realestate-content">
               <div class="tab-pane pt-2 fade show" id="{{ region }}-recently" role="tabpanel" aria-labelledby="{{ region }}-recently-tab">
                 <div id="{{ region }}"></div>
-                <div class="row">
+                <div class="row {{ region }}-btn">
                   <div class="col-auto ml-auto">
                     <a class="btn btn-primary btn-sm" href="{{ r.url }}">
                       {{ site.data.lang-uk.others }} {{ site.data.lang-uk.others_offers }}
