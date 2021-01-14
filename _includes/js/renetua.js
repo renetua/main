@@ -5,14 +5,14 @@ $('.nav-tabs>li>a.nav-link').on('click', function(){ $('.navbar-collapse').colla
 $(document).on('click', function (e) { if ($(e.target).closest(".card").length === 0) { $('.collapse').collapse('hide'); } });
 $(document).ready(function(){ $('.toast').toast('show'); $('.alert').alert(); });
 
-var isifua = document.getElementById("if-ua").innerHTML === "";
+var isifua = document.getElementById("if-ua").hasChildNodes();
 console.log(isifua);
 if (isifua) {
   document.getElementById("if-ua").innerHTML = "<p>Вебсайт if-ua тільки будується...</p>";
   document.getElementsByClassName("if-ua-btn")[0].className = "d-none";
 }
 
-var isvnua = document.getElementById("vn-ua").innerHTML === "";
+var isvnua = document.getElementById("vn-ua").hasChildNodes();
 console.log(isvnua);
 if (isvnua) {
   document.getElementById("vn-ua").innerHTML = "<p>Вебсайт vn-ua тільки будується...</p>";
