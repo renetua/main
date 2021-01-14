@@ -10,7 +10,8 @@ $(document).ready(function(){ $('.toast').toast('show'); $('.alert').alert(); })
   {%- assign region = sr.url | split: "." | slice: 2, 4 | join: "." | replace: ".", "-" -%}
   {%- if sr.url != site.url -%}
     var is{{ region | remove: "-" }} = document.getElementById("{{ region }}").innerHTML === "";
-    if (is{{ region | remove: "-" }}) {
+    console.log(is{{ region | remove: "-" }});
+    if (is{{ region | remove: "-" }} === true) {
       document.getElementById("{{ region }}").innerHTML = "<p>Вебсайт {{ sr.url }} тільки будується...</p>";
       document.getElementsByClassName("{{ region }}-btn")[0].className = "d-none";
     }
