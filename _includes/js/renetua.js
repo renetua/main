@@ -11,8 +11,8 @@ $(document).ready(function(){ $('.toast').toast('show'); $('.alert').alert(); })
 {%- for sr in srs -%}
   {%- assign region = sr.url | split: "." | slice: 2, 4 | join: "." | replace: ".", "-" -%}
   {%- if sr.url != site.url -%}
-  let isVnUa = document.getElementById("{{ region }}").innerHTML === "";
-  if (isVnUa) {
+  let is{{ region }} = document.getElementById("{{ region }}").innerHTML === "";
+  if (is{{ region }}) {
     document.getElementById("{{ region }}").innerHTML = "<p>Вебсайт {{ site.url }} тільки будується...</p>";
     document.getElementsByClassName("{{ region }}-btn")[0].className = "d-none";
   }
