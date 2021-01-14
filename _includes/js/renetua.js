@@ -8,18 +8,18 @@ $(document).ready(function(){ $('.toast').toast('show'); $('.alert').alert(); })
 var isifua = document.getElementById("if-ua");
 console.log(isifua);
 console.log(isifua.hasChildNodes().length);
-if (isifua) {
-  document.getElementById("if-ua").innerHTML = "<p>Вебсайт if-ua тільки будується...</p>";
-  document.getElementsByClassName("if-ua-btn")[0].className = "d-none";
-}
+// if (isifua) {
+//   document.getElementById("if-ua").innerHTML = "<p>Вебсайт if-ua тільки будується...</p>";
+//   document.getElementsByClassName("if-ua-btn")[0].className = "d-none";
+// }
 
 var isvnua = document.getElementById("vn-ua");
 console.log(isvnua);
 console.log(isvnua.hasChildNodes().length);
-if (isvnua) {
-  document.getElementById("vn-ua").innerHTML = "<p>Вебсайт vn-ua тільки будується...</p>";
-  document.getElementsByClassName("vn-ua-btn")[0].className = "d-none";
-}
+// if (isvnua) {
+//   document.getElementById("vn-ua").innerHTML = "<p>Вебсайт vn-ua тільки будується...</p>";
+//   document.getElementsByClassName("vn-ua-btn")[0].className = "d-none";
+// }
 
 });
 
