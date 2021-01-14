@@ -7,6 +7,12 @@ $(document).ready(function(){ $('.toast').toast('show'); $('.alert').alert(); })
 
 var ifUa = document.querySelector('div#if-ua');
 var vnUa = document.querySelector('div#vn-ua');
-console.log(ifUa);
-console.log(vnUa);
+var isVnUa = document.getElementById('vn-ua').innerHTML === "";
+
+console.log(isVnUa);
+
+if (isVnUa) {
+  document.getElementById('vn-ua').innerHTML = "<p>Вебсайт ще тільки будується...</p>";
+}
+
 });
