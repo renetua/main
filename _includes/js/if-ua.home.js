@@ -56,12 +56,11 @@
 
   {%- else -%}
 
-    $(document).ready(function() {
-      
-    });
+    document.getElementById("{{ region }}").innerHTML = '<div class="alert alert-success mb-0" role="alert"> <a href="{{ sr.url }}" class="alert-link">Додати&nbsp;оголошення</a> про нерухомість у ....</div>';
 
   {%- endif -%}
 {%- endfor -%}
+
 
 {%- comment -%}
 
@@ -170,4 +169,4 @@ function vnuaRandom() {
 
 $(document).ready(function() { vnuaRandom(); });
 
-{%- comment -%}
+{%- endcomment -%}
