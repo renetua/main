@@ -7,7 +7,7 @@ $(document).ready(function(){ $('.toast').toast('show'); $('.alert').alert(); })
 
 const isifua = document.getElementById("if-ua").children;
 console.log(isifua);
-if (isifua > 0) {
+while (isifua.length > 0)
   document.getElementById("if-ua").innerHTML = "<p>Вебсайт if-ua тільки будується...</p>";
   document.getElementsByClassName("if-ua-btn")[0].className = "d-none";
 }
@@ -20,7 +20,7 @@ if (isifua > 0) {
 
 const isvnua = document.getElementById("vn-ua").children;
 console.log(isvnua);
-if (isvnua > 0) {
+while (isvnua.length > 0)
   document.getElementById("vn-ua").innerHTML = "<p>Вебсайт vn-ua тільки будується...</p>";
   document.getElementsByClassName("vn-ua-btn")[0].className = "d-none";
 }
