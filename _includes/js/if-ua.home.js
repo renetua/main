@@ -84,6 +84,7 @@ function vnuaRandom() {
 
   }).fail(function(data) {
       alert("error vn");
+      var div = $("#vn-ua");
       div.append('<div class="alert alert-success mb-0" role="alert"> <a href="#" class="alert-link">Додати&nbsp;оголошення</a> про нерухомість у ....</div>');
   });
 
