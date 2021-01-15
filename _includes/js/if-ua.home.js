@@ -3,10 +3,10 @@
 {%- assign srs = site.data.realestate -%}
 {%- for sr in srs -%}
   {%- assign region = sr.url | split: "." | slice: 2, 4 | join: "." | replace: ".", "-" -%}
-  {%- if sr.url != site.url and slug != '' -%}
+  {%- if sr.url != site.url and sr.slug != '' -%}
 
     function {{ region | remove: "-" }}Random() {
-      $.getJSON("{{ sr.url }}/region/{{ slug }}/data/all.json", function(data) {
+      $.getJSON("{{ sr.url }}/region/{{ sr.slug }}/data/all.json", function(data) {
         var count = data.length; var random = []; var counter = 0; var number = 3; var div = $("#{{ region }}"); var usd = {{ site.usd }}; var eur = {{ site.eur }};
         function reAdsLocation() { return (data[i].location && data[i].location !== '') ? ', ' + data[i].location : ''; };
         function reAdsRegion() { return (data[i].region && data[i].region !== '') ? ', ' + data[i].region : ''; };
@@ -56,7 +56,7 @@
 
   {%- else -%}
 
-    document.getElementById("{{ region }}").innerHTML = '<div class="alert alert-success mb-0" role="alert"> <a href="{{ sr.url }}" class="alert-link">Додати&nbsp;оголошення</a> про нерухомість у ....</div>';
+    document.getElementById("{{ region }}").innerHTML = '<div class="alert alert-success mb-0" role="alert"> <a href="{{ sr.url }}" class="alert-link">Додати&nbsp;оголошення</a> про нерухомість {{ site.data.lang-uk.re_ta }} {{ sr.title }}</div>';
 
   {%- endif -%}
 {%- endfor -%}
