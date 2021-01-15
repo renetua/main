@@ -51,7 +51,6 @@ function vnuaRandom() {
     function reAdsPriceSqmt() { if (data[i].price_sqmt !== '' && data[i].price_sqmt.indexOf('$') !== -1) { return '{{ site.data.lang-uk.re_cost }} <span class="mark" data-toggle="tooltip" title="' + data[i].price_sqmt + '">' + (data[i].price_sqmt.replace('$','') * usd).toFixed(0) + '</span>&nbsp;{{ site.data.lang-uk.re_uah }}'; } else if (data[i].price_sqmt !== '' && data[i].price_sqmt.indexOf('€') !== -1) { return '{{ site.data.lang-uk.re_cost }} <span class="mark" data-toggle="tooltip" title="' + data[i].price_sqmt + '">' + (data[i].price_sqmt.replace('€','') * eur).toFixed(0) + '</span>&nbsp;{{ site.data.lang-uk.re_uah }}'; } else if (data[i].price_sqmt !== '') { return '{{ site.data.lang-uk.re_cost }} <span class="mark" data-toggle="tooltip" title="' + data[i].price_sqmt + '">' + (data[i].price_sqmt * 1).toFixed(0) + '</span>&nbsp;{{ site.data.lang-uk.re_uah }}'; } }
     function reAdsTel() { return '<span class="phone" data-toggle="tooltip" title="' + data[i].seller + '"><details><summary></summary><a href="tel:+' + data[i].phone + '">+' + data[i].phone.substr(0, 2) + '&nbsp;' + data[i].phone.substr(2, 3) + '&nbsp;' + data[i].phone.substr(5, 3) + '&nbsp;' + data[i].phone.substr(8, 2) + '&nbsp;' + data[i].phone.substr(10, 2) + '</a></details></span>'; }
     function reAdsType() {
-      console.log(count);
       if (count > 0) {
         if (data[i].type === '{{ site.data.lang-uk.re_apartment }}' && data[i].rent === '' && data[i].price !== '') {
           div.append('<div class="card mb-2"><div class="card-body p-2"><strong>{{ site.data.lang-uk.re_sell_apartment }}</strong> загальною площею ' + data[i].surface + '&nbsp;м<sup>2</sup>, кімнат ' + data[i].rooms + ', на ' + data[i].floor + '-му поверсі за адресою ' + data[i].address + '' + reAdsLocation() + '' + reAdsRegion() + ', ' + reAdsPrice() + ', ' + reAdsTel() + '</div></div>');
@@ -78,14 +77,16 @@ function vnuaRandom() {
         }
       } else {
         div.append('<div class="alert alert-success mb-0" role="alert"> <a href="#" class="alert-link">Додати&nbsp;оголошення</a> про нерухомість у ....</div>');
+        document.getElementsByClassName("if-ua-btn")[0].className = "d-none";
       }
     }
     div.append(); while (counter < number) { var i = Math.floor(Math.random() * count); if (random.indexOf(i) == "-1") { if (counter == (number - 1)) { reAdsType(); } else { reAdsType(); } random.push(i); counter++; } }
 
-  }).fail(function(data) {
-      alert("error vn");
+  }).fail(function(data, textStatus, error) {
+      console.error("getJSON failed, status: " + textStatus + ", error: "+error)
       var div = $("#vn-ua");
       div.append('<div class="alert alert-success mb-0" role="alert"> <a href="#" class="alert-link">Додати&nbsp;оголошення</a> про нерухомість у ....</div>');
+      document.getElementsByClassName("if-ua-btn")[0].className = "d-none";
   });
 
 }
