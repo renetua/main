@@ -18,8 +18,8 @@ for (i = 0; i <= isifua.length - 1; i++) {
 
 const isvnua = document.getElementById("vn-ua").children;
 console.log(isvnua);
-for (i = 0; i <= isvnua.length - 1; i++) {
-  console.log(i);
+for (j = 0; j <= isvnua.length - 1; j++) {
+  console.log(j);
 }
 // if (isvnua) {
 //   document.getElementById("vn-ua").innerHTML = "<p>Вебсайт vn-ua тільки будується...</p>";
