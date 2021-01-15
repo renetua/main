@@ -18,13 +18,13 @@ if(typeof(isifua) != 'undefined' && element != null){
 //   document.getElementsByClassName("if-ua-btn")[0].className = "d-none";
 // }
 
-var isvnua = document.getElementById("vn-ua");
-console.log(isvnua);
-if(typeof(isvnua) != 'undefined' && element != null){
-     alert('Element exists!');
- } else{
-     alert('Element does not exist!');
- }
+// var isvnua = document.getElementById("vn-ua");
+// console.log(isvnua);
+// if(typeof(isvnua) != 'undefined' && element != null){
+//      alert('Element exists!');
+//  } else{
+//      alert('Element does not exist!');
+//  }
 // if (isvnua) {
 //   document.getElementById("vn-ua").innerHTML = "<p>Вебсайт vn-ua тільки будується...</p>";
 //   document.getElementsByClassName("vn-ua-btn")[0].className = "d-none";
