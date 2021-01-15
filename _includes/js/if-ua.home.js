@@ -39,7 +39,7 @@ function ifuaRandom() {
       //div.append(' <div class="row if-ua-btn"><div class="col-auto ml-auto"> <a class="btn btn-primary btn-sm" href="https://www.realestate.if.ua"> Інші пропозиції нерухомості </a></div></div>');
     }
   div.append();
-  div.insertAdjacentHTML('afterend', '<div class="row if-ua-btn"><div class="col-auto ml-auto"> <a class="btn btn-primary btn-sm" href="https://www.realestate.if.ua">Інші ' + count + ' пропозиції нерухомості </a></div></div>');
+  document.getElementById("if-ua").insertAdjacentHTML('afterend', '<div class="row if-ua-btn"><div class="col-auto ml-auto"> <a class="btn btn-primary btn-sm" href="https://www.realestate.if.ua">Інші ' + count + ' пропозиції нерухомості </a></div></div>');
   while (counter < number) { var i = Math.floor(Math.random() * count); if (random.indexOf(i) == "-1") { if (counter == (number - 1)) { reAdsType(); } else { reAdsType(); } random.push(i); counter++; } } }); } $(document).ready(function() { ifuaRandom(); });
 
 function vnuaRandom() {
