@@ -23,7 +23,7 @@ if (isifua.childElementCount > 0) {
 // }
 
 const isvnua = document.getElementById("vn-ua");
-console.log(isvnua[0]));
+console.log(isvnua[0]);
 
 if (isvnua.childElementCount > 0) {
   console.log("vn ua > 0");
