@@ -6,25 +6,16 @@ $(document).on('click', function (e) { if ($(e.target).closest(".card").length =
 $(document).ready(function(){ $('.toast').toast('show'); $('.alert').alert(); });
 
 var isifua = document.getElementById("if-ua");
-console.log(isifua);
-if(typeof(isifua) != 'undefined' && element != null){
-     alert('Element exists!');
- } else{
-     alert('Element does not exist!');
- }
+while(isifua.firstChild)
+console.log(while(isifua.firstChild));
 
 // if (isifua) {
 //   document.getElementById("if-ua").innerHTML = "<p>Вебсайт if-ua тільки будується...</p>";
 //   document.getElementsByClassName("if-ua-btn")[0].className = "d-none";
 // }
 
-// var isvnua = document.getElementById("vn-ua");
-// console.log(isvnua);
-// if(typeof(isvnua) != 'undefined' && element != null){
-//      alert('Element exists!');
-//  } else{
-//      alert('Element does not exist!');
-//  }
+var isvnua = document.getElementById("vn-ua");
+console.log(isvnua);
 // if (isvnua) {
 //   document.getElementById("vn-ua").innerHTML = "<p>Вебсайт vn-ua тільки будується...</p>";
 //   document.getElementsByClassName("vn-ua-btn")[0].className = "d-none";
