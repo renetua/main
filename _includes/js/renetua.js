@@ -6,7 +6,7 @@ $(document).on('click', function (e) { if ($(e.target).closest(".card").length =
 $(document).ready(function(){ $('.toast').toast('show'); $('.alert').alert(); });
 
 const isifua = document.getElementById("if-ua");
-console.log(isifua[0]);
+console.log(isifua);
 
 if (isifua.childElementCount > 0) {
   console.log("if ua > 0");
@@ -23,7 +23,7 @@ if (isifua.childElementCount > 0) {
 // }
 
 const isvnua = document.getElementById("vn-ua");
-console.log(isvnua[0]);
+console.log(isvnua);
 
 if (isvnua.childElementCount > 0) {
   console.log("vn ua > 0");
