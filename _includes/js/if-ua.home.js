@@ -77,7 +77,7 @@ function vnuaRandom() {
         }
       } else {
         div.append('<div class="alert alert-success mb-0" role="alert"> <a href="#" class="alert-link">Додати&nbsp;оголошення</a> про нерухомість у ....</div>');
-        document.getElementsByClassName("if-ua-btn")[0].className = "d-none";
+        document.getElementsByClassName("if-vn-btn")[0].className = "d-none";
       }
     }
     div.append(); while (counter < number) { var i = Math.floor(Math.random() * count); if (random.indexOf(i) == "-1") { if (counter == (number - 1)) { reAdsType(); } else { reAdsType(); } random.push(i); counter++; } }
@@ -86,7 +86,7 @@ function vnuaRandom() {
       console.error("getJSON failed, status: " + textStatus + ", error: "+error)
       var div = $("#vn-ua");
       div.append('<div class="alert alert-success mb-0" role="alert"> <a href="#" class="alert-link">Додати&nbsp;оголошення</a> про нерухомість у ....</div>');
-      document.getElementsByClassName("if-ua-btn")[0].className = "d-none";
+      document.getElementsByClassName("if-vn-btn")[0].className = "d-none";
   });
 
 }
