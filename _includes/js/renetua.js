@@ -4,15 +4,15 @@ $("body").tooltip({selector:'[data-toggle="tooltip"]'});
 $('.nav-tabs>li>a.nav-link').on('click', function(){ $('.navbar-collapse').collapse('hide'); })
 $(document).on('click', function (e) { if ($(e.target).closest(".card").length === 0) { $('.collapse').collapse('hide'); } });
 $(document).ready(function(){ $('.toast').toast('show'); $('.alert').alert(); });
-
-const isifua = document.getElementById("if-ua");
-console.log(isifua);
-
-if (isifua.childElementCount > 0) {
-  console.log("if ua > 0");
-  document.getElementById("if-ua").innerHTML = "<p>Вебсайт if-ua тільки будується...</p>";
-  document.getElementsByClassName("if-ua-btn")[0].className = "d-none";
-}
+//
+// const isifua = document.getElementById("if-ua");
+// console.log(isifua);
+//
+// if (isifua.childElementCount > 0) {
+//   console.log("if ua > 0");
+//   document.getElementById("if-ua").innerHTML = "<p>Вебсайт if-ua тільки будується...</p>";
+//   document.getElementsByClassName("if-ua-btn")[0].className = "d-none";
+// }
 // while (isifua.length > 0) {
 //   document.getElementById("if-ua").innerHTML = "<p>Вебсайт if-ua тільки будується...</p>";
 //   document.getElementsByClassName("if-ua-btn")[0].className = "d-none";
@@ -21,15 +21,15 @@ if (isifua.childElementCount > 0) {
 //   document.getElementById("if-ua").innerHTML = "<p>Вебсайт if-ua тільки будується...</p>";
 //   document.getElementsByClassName("if-ua-btn")[0].className = "d-none";
 // }
-
-const isvnua = document.getElementById("vn-ua");
-console.log(isvnua);
-
-if (isvnua.childElementCount > 0) {
-  console.log("vn ua > 0");
-  document.getElementById("vn-ua").innerHTML = "<p>Вебсайт vn-ua тільки будується...</p>";
-  document.getElementsByClassName("vn-ua-btn")[0].className = "d-none";
-}
+//
+// const isvnua = document.getElementById("vn-ua");
+// console.log(isvnua);
+//
+// if (isvnua.childElementCount > 0) {
+//   console.log("vn ua > 0");
+//   document.getElementById("vn-ua").innerHTML = "<p>Вебсайт vn-ua тільки будується...</p>";
+//   document.getElementsByClassName("vn-ua-btn")[0].className = "d-none";
+// }
 // while (isvnua.length > 0) {
 //   document.getElementById("vn-ua").innerHTML = "<p>Вебсайт vn-ua тільки будується...</p>";
 //   document.getElementsByClassName("vn-ua-btn")[0].className = "d-none";
