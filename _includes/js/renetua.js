@@ -7,6 +7,9 @@ $(document).ready(function(){ $('.toast').toast('show'); $('.alert').alert(); })
 
 const isifua = document.getElementById("if-ua").children;
 console.log(isifua);
+for (i = 0; i <= isifua.length - 1; i++) {
+  console.log(i);
+}
 
 // if (isifua) {
 //   document.getElementById("if-ua").innerHTML = "<p>Вебсайт if-ua тільки будується...</p>";
@@ -15,6 +18,9 @@ console.log(isifua);
 
 const isvnua = document.getElementById("vn-ua").children;
 console.log(isvnua);
+for (i = 0; i <= isvnua.length - 1; i++) {
+  console.log(i);
+}
 // if (isvnua) {
 //   document.getElementById("vn-ua").innerHTML = "<p>Вебсайт vn-ua тільки будується...</p>";
 //   document.getElementsByClassName("vn-ua-btn")[0].className = "d-none";
