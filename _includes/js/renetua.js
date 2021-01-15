@@ -6,7 +6,8 @@ $(document).on('click', function (e) { if ($(e.target).closest(".card").length =
 $(document).ready(function(){ $('.toast').toast('show'); $('.alert').alert(); });
 
 const isifua = document.getElementById("if-ua").children;
-console.log(isifua.length);
+const leifua = isifua.length;
+console.log(leifua);
 
 // if (isifua) {
 //   document.getElementById("if-ua").innerHTML = "<p>Вебсайт if-ua тільки будується...</p>";
@@ -14,7 +15,8 @@ console.log(isifua.length);
 // }
 
 const isvnua = document.getElementById("vn-ua").children;
-console.log(isvnua.length);
+const levnua = isifua.length;
+console.log(levnua);
 // if (isvnua) {
 //   document.getElementById("vn-ua").innerHTML = "<p>Вебсайт vn-ua тільки будується...</p>";
 //   document.getElementsByClassName("vn-ua-btn")[0].className = "d-none";
