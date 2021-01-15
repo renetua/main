@@ -12,5 +12,5 @@ sitemap: false
 {%- include js/bootstrap.lightbox.min.js -%}
 {%- endcomment -%}
 {%- include js/bootstrap.smoothscroll.min.js -%}
-{%- include js/if-ua.home.js -%}
+{%- include js/ua.home.js -%}
 {%- include js/renetua.js -%}
