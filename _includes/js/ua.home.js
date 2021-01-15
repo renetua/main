@@ -3,6 +3,7 @@
 {%- for sr in srs -%}
   {%- assign region = sr.url | split: "." | slice: 2, 4 | join: "." | replace: ".", "-" -%}
   {%- if sr.slug and sr.slug != '' -%}
+
     function {{ region | remove: "-" }}Random() {
       $.getJSON("{{ sr.url }}/region/{{ sr.slug }}/data/all.json", function(data) {
         var count = data.length; var random = []; var counter = 0; var number = 3; var div = $("#{{ region }}"); var usd = {{ site.usd }}; var eur = {{ site.eur }};
@@ -49,8 +50,12 @@
         div.append('<div class="alert alert-success mb-0" role="alert"> <a href="{{ sr.url }}" class="alert-link">Додати&nbsp;оголошення</a> про нерухомість у ....</div>');
       });
     }
+    
     $(document).ready(function() { {{ region | remove: "-" }}Random(); });
+
   {%- else -%}
+
     document.getElementById("{{ region }}").innerHTML = '<div class="alert alert-success mb-0" role="alert"> <a href="{{ sr.url }}" class="alert-link">Додати&nbsp;оголошення</a> про {{ sr.title | replace_first: 'Н', 'н' }}</div>';
+
   {%- endif -%}
 {%- endfor -%}
