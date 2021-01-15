@@ -41,7 +41,7 @@ function ifuaRandom() {
   div.append(); while (counter < number) { var i = Math.floor(Math.random() * count); if (random.indexOf(i) == "-1") { if (counter == (number - 1)) { reAdsType(); } else { reAdsType(); } random.push(i); counter++; } } }); } $(document).ready(function() { ifuaRandom(); });
 
 function vnuaRandom() {
-  $.getJSON("http://www.realestate.vn.ua/region/vinnytska/data/all.json", function(data) {
+  $.getJSON("https://www.realestate.vn.ua/region/vinnytska/data/all.json", function(data) {
     var count = data.length; var random = []; var counter = 0; var number = 3; var div = $("#vn-ua"); var usd = {{ site.usd }}; var eur = {{ site.eur }};
     function reAdsLocation() { return (data[i].location && data[i].location !== '') ? ', ' + data[i].location : ''; };
     function reAdsRegion() { return (data[i].region && data[i].region !== '') ? ', ' + data[i].region : ''; };
