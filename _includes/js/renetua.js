@@ -9,6 +9,8 @@ const isifua = document.getElementById("if-ua");
 console.log(isifua);
 if (isifua.childElementCount > 0) {
   console.log("if ua > 0");
+  document.getElementById("if-ua").innerHTML = "<p>Вебсайт if-ua тільки будується...</p>";
+  document.getElementsByClassName("if-ua-btn")[0].className = "d-none";
 }
 
 
@@ -24,7 +26,9 @@ if (isifua.childElementCount > 0) {
 const isvnua = document.getElementById("vn-ua");
 console.log(isvnua);
 if (isvnua.childElementCount > 0) {
-  console.log("if ua > 0");
+  console.log("vn ua > 0");
+  document.getElementById("vn-ua").innerHTML = "<p>Вебсайт vn-ua тільки будується...</p>";
+  document.getElementsByClassName("vn-ua-btn")[0].className = "d-none";
 }
 
 // while (isvnua.length > 0) {
