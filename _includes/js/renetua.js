@@ -5,15 +5,26 @@ $('.nav-tabs>li>a.nav-link').on('click', function(){ $('.navbar-collapse').colla
 $(document).on('click', function (e) { if ($(e.target).closest(".card").length === 0) { $('.collapse').collapse('hide'); } });
 $(document).ready(function(){ $('.toast').toast('show'); $('.alert').alert(); });
 
-var isifua = document.querySelectorAll("div#if-ua")[0];
+var isifua = document.getElementById("if-ua");
 console.log(isifua);
+if(typeof(isifua) != 'undefined' && element != null){
+     alert('Element exists!');
+ } else{
+     alert('Element does not exist!');
+ }
+
 // if (isifua) {
 //   document.getElementById("if-ua").innerHTML = "<p>Вебсайт if-ua тільки будується...</p>";
 //   document.getElementsByClassName("if-ua-btn")[0].className = "d-none";
 // }
 
-var isvnua = document.querySelectorAll("div#vn-ua")[0];
+var isvnua = document.getElementById("vn-ua");
 console.log(isvnua);
+if(typeof(isvnua) != 'undefined' && element != null){
+     alert('Element exists!');
+ } else{
+     alert('Element does not exist!');
+ }
 // if (isvnua) {
 //   document.getElementById("vn-ua").innerHTML = "<p>Вебсайт vn-ua тільки будується...</p>";
 //   document.getElementsByClassName("vn-ua-btn")[0].className = "d-none";
