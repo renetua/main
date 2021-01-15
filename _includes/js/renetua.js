@@ -8,7 +8,11 @@ $(document).ready(function(){ $('.toast').toast('show'); $('.alert').alert(); })
 const isifua = document.getElementById("if-ua").children;
 //console.log(isifua);
 for (i = 0; i <= isifua.length - 1; i++) {
-  console.log(i);
+  console.log(isifua[i]);
+  if (isifua[i] > 0) {
+    document.getElementById("if-ua").innerHTML = "<p>Вебсайт if-ua тільки будується...</p>";
+    document.getElementsByClassName("if-ua-btn")[0].className = "d-none";
+  }
 }
 
 // if (isifua) {
@@ -19,7 +23,11 @@ for (i = 0; i <= isifua.length - 1; i++) {
 const isvnua = document.getElementById("vn-ua").children;
 //console.log(isvnua);
 for (j = 0; j <= isvnua.length - 1; j++) {
-  console.log(j);
+  console.log(isvnua[j]);
+  if (isvnua[j] > 0) {
+    document.getElementById("vn-ua").innerHTML = "<p>Вебсайт vn-ua тільки будується...</p>";
+    document.getElementsByClassName("vn-ua-btn")[0].className = "d-none";
+  }
 }
 // if (isvnua) {
 //   document.getElementById("vn-ua").innerHTML = "<p>Вебсайт vn-ua тільки будується...</p>";
