@@ -10,16 +10,9 @@ window.onload = function() {
   const rssifua = new RSS(
     document.querySelector("#if-ua-news"),
     "https://www.realestate.if.ua/feed.xml",
-    {dateFormatFunction:function(date){},layoutTemplate:'{entries}',entryTemplate:'<div class="card border-0"<div class="card-body px-0 pt-0 pb-1"><p class="card-text mb-1"><span class="small text-muted">{date}</span></p><h5 class="card-title h6 mb-1"><a href="{url}">{title}</a></h5><p class="card-text mb-0">{shortBodyPlain}</p></div></div>'}
+    {layoutTemplate:'{entries}',entryTemplate:'<div class="card border-0"<div class="card-body px-0 pt-0 pb-1"><p class="card-text mb-1"><span class="small text-muted">{date}</span></p><h5 class="card-title h6 mb-1"><a href="{url}">{title}</a></h5><p class="card-text mb-0">{shortBodyPlain}</p></div></div>'}
   );
-  rssifua
-    .on('date', (date) => {
-      console.log(date.rss);
-      console.log(date.feed);
-      console.log(date.entries);
-    })
-    .render()
-    .then(()=>{},(e)=>{document.getElementById("if-ua-news").innerHTML = '<div class="alert alert-success mb-0" role="alert">Новин про {{ sr.title | replace_first: 'Н', 'н' }} ще немає...</div>';});
+  rssifua.render().then(()=>{},(e)=>{document.getElementById("if-ua-news").innerHTML = '<div class="alert alert-success mb-0" role="alert">Новин про {{ sr.title | replace_first: 'Н', 'н' }} ще немає...</div>';});
 };
 
 {%- comment -%}
