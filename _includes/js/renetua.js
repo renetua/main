@@ -5,14 +5,15 @@ $(document).ready(function(){
   $(document).on('click', function (e) { if ($(e.target).closest(".card").length === 0) { $('.collapse').collapse('hide'); } });
   $(document).ready(function(){ $('.toast').toast('show'); $('.alert').alert(); });
 
-
-  const RSS = require('vanilla-rss');
-  const rssifua = new RSS(
-    document.querySelector("#if-ua-news"),
-    "https://www.realestate.if.ua/feed.xml",
-    {ssl: true, host: 'realestate.if.ua', layoutTemplate: '{entries}', entryTemplate: '<div class="card mb-2"><div class="card-body"><p class="card-text mb-1"><span class="small text-muted">{date}</span></p><h5 class="card-title h6 mb-1"><a href="{url}">{title}</a></h5><p class="card-text mb-0">{shortBodyPlain}</div></div></div>'}
-  );
-  rssifua.render();
+  $(document).ready(function(){
+    const RSS = require('vanilla-rss');
+    const rssifua = new RSS(
+      document.querySelector("#if-ua-news"),
+      "https://www.realestate.if.ua/feed.xml",
+      {ssl: true, host: 'realestate.if.ua', layoutTemplate: '{entries}', entryTemplate: '<div class="card mb-2"><div class="card-body"><p class="card-text mb-1"><span class="small text-muted">{date}</span></p><h5 class="card-title h6 mb-1"><a href="{url}">{title}</a></h5><p class="card-text mb-0">{shortBodyPlain}</div></div></div>'}
+    );
+    rssifua.render();
+  });
 
 });
 
