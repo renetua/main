@@ -13,8 +13,8 @@ $(document).ready(function(){
     {%- if sr.slug and sr.slug != '' -%}
       const rss{{ loc }} = new RSS(
         document.querySelector("#{{ region }}-news"),
-        "{{ sr.title }}/feed.xml",
-        {}
+        "{{ sr.url }}/feed.xml",
+        {ssl: true, host: '{{ site.domain }}', layoutTemplate: '{entries}', entryTemplate: '<div class="card mb-2"><div class="card-body"><p class="card-text mb-1"><span class="small text-muted">{date}</span></p><h5 class="card-title h6 mb-1"><a href="{url}">{title}</a></h5><p class="card-text mb-0">{shortBodyPlain}</div></div></div>'}
       );
       rss{{ loc }}.render();
     {%- else -%}
