@@ -35,13 +35,13 @@ navhide: 1
                     </a>
                   </li>
                   <li class="nav-item" role="presentation">
-                    <a class="nav-link pl-0 pr-1 border-0" id="{{ region }}-news-tab" data-toggle="tab"  href="#{{ region }}-news" role="tab" aria-controls="{{ region }}-news" aria-selected="true">
+                    <a class="nav-link pl-0 pr-1 border-0" href="{{ r.url }}/news/" target="_blank" title="Новини про нерухомость - {{ r.small }}">
                       <span>Новини</span>
                     </a>
                   </li>
                   {%- if r.slug and r.slug !='' -%}
                   <li class="nav-item" role="presentation">
-                    <a class="nav-link pl-0 pr-1 border-0" id="{{ region }}-map-tab" href="{{ r.url }}/region/{{ r.slug }}/map.html" target="_blank" title="Мапа нерухомості - {{ r.small }}">
+                    <a class="nav-link pl-0 pr-1 border-0" href="{{ r.url }}/region/{{ r.slug }}/map.html" target="_blank" title="Мапа нерухомості - {{ r.small }}">
                       <span>Мапа</span>
                     </a>
                   </li>
@@ -58,10 +58,6 @@ navhide: 1
             <div class="tab-content" id="{{ region }}-realestate-content">
               <div class="tab-pane pt-2 fade show active" id="{{ region }}-recently" role="tabpanel" aria-labelledby="{{ region }}-recently-tab">
                 <div id="{{ region }}"></div>
-              </div>
-              <div class="tab-pane pt-3 fade show" id="{{ region }}-news" role="tabpanel" aria-labelledby="{{ region }}-news-tab">
-                <h3 class="h6">Новини про {{ r.title | replace: 'Н', 'н' }}</h3>
-                <div id="{{ region }}-news"></div>
               </div>
               <div class="tab-pane pt-3 fade show" id="{{ region }}-about" role="tabpanel" aria-labelledby="{{ region }}-about-tab">
                 {{ site.data.lang-uk.www }} <strong>{{ r.url | remove: 'http://' | remove: 'https://' }}</strong> {{ site.data.lang-uk.description_site }} {{ r.navtitle | replace_first: 'о', 'і' }} {{ site.data.lang-uk.re_ta }} {{ title }}.

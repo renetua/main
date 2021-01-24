@@ -8,5 +8,4 @@ sitemap: false
 {%- include js/bootstrap.min.js -%}
 {%- include js/bootstrap.smoothscroll.min.js -%}
 {%- include js/ua.home.js -%}
-{%- include js/rss.global.min.js -%}
 {%- include js/renetua.js -%}
