@@ -81,12 +81,12 @@ plugins:
 sass:
   style: compressed
 
-# compress_html:
-#   clippings: all
-#   comments: [""]
-#   endings: all
-#   ignore:
-#     envs: []
-#   blanklines: false
-#   profile: false
-#   startings: [html, head, body]
+compress_html:
+  clippings: all
+  comments: [""]
+  endings: all
+  ignore:
+    envs: []
+  blanklines: false
+  profile: false
+  startings: []
