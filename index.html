@@ -12,7 +12,7 @@ navhide: 1
     {%- assign region = r.url | split: "." | slice: 2, 4 | join: "." | replace: ".", "-" -%}
     {%- assign image = region | append: ".jpg" -%}
     {%- if r.url != site.url -%}
-    <div id="{{ region }}" class="col mb-4">
+    <div class="col mb-4">
       <div class="card">
         <img src="/assets/images/locations/{{ image }}" class="card-img-top" alt="Нерухомість у {{ r.navtitle | replace_first: "о", "і" }}">
         <div class="card-body p-2">
