@@ -19,42 +19,39 @@ layout: compress
 
       <main{% if page.url == "/" %} class="content my-4"{% else %} class="content mb-4"{% endif %}>
 
-
         {% if page.url == "/" %}
-            <div class="container pb-1 lead-badge">
-              <h1 class="h3">Безкоштовні оголошення про продаж і оренду нерухомого майна в регіонах України</h1>
-              <a class="badge badge-primary" data-toggle="collapse" href="#collapseArea" role="button" aria-expanded="false" aria-controls="collapseArea" title="Місцевість де розташована нерухомість">Виберіть місцевіть</a> <span class="badge badge-light text-wrap text-left">де б ви хотіли <strong>знайти, купити чи продати нерухомість</strong></span>
-            </div>
-            {% comment %}
-            <div class="bg-light mb-3">
-              <div class="container">
-                <div class="collapse" id="collapseArea">
-                  <div class="bg-light pb-3 px-0 border-0 card card-body">
-                    <div class="row">
-                      <div class="col-12">
-                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
-                          {%- assign regs = site.data.realestate | sort: 'navtitle' -%}
-                          {%- for reg in regs -%}
-                          {% if region == "crimea-ua" %}
-                            {%- assign treg = "Автономній Республіці Крим" -%}
-                          {% else %}
-                            {%- assign treg = reg.small | replace: "ька", "ькій" | replace: "ть", "ті" -%}
-                          {% endif %}
-                          {%- if reg.url != site.url -%}
-                          <div class="col mb-2">
-                            <a href="#{{ region }}" title="{{ site.data.lang-uk.realestate_at }} {{ treg }}">{{ reg.navtitle }}</a>
-                            <small>{{ site.data.lang-uk.re_ta }} {{ reg.small }}</small>
-                          </div>
-                          {%- endif -%}
-                          {%- endfor -%}
-                        </div>
+        <div class="container pb-1 lead-badge">
+          <h1 class="h3">Безкоштовні оголошення про продаж і оренду нерухомого майна в регіонах України</h1>
+          <a class="badge badge-primary" data-toggle="collapse" href="#collapseArea" role="button" aria-expanded="false" aria-controls="collapseArea" title="Місцевість де розташована нерухомість">Виберіть місцевіть</a> <span class="badge badge-light text-wrap text-left">де б ви хотіли <strong>знайти, купити чи продати нерухомість</strong></span>
+        </div>
+        <div class="bg-light mb-3">
+          <div class="container">
+            <div class="collapse" id="collapseArea">
+              <div class="bg-light pb-3 px-0 border-0 card card-body">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
+                      {%- assign regs = site.data.realestate | sort: 'navtitle' -%}
+                      {%- for reg in regs -%}
+                      {% if region == "crimea-ua" %}
+                        {%- assign treg = "Автономній Республіці Крим" -%}
+                      {% else %}
+                        {%- assign treg = reg.small | replace: "ька", "ькій" | replace: "ть", "ті" -%}
+                      {% endif %}
+                      {%- if reg.url != site.url -%}
+                      <div class="col mb-2">
+                        <a href="#{{ anhor }}" title="{{ site.data.lang-uk.realestate_at }} {{ treg }}">{{ reg.navtitle }}</a>
+                        <small>{{ site.data.lang-uk.re_ta }} {{ reg.small }}</small>
                       </div>
+                      {%- endif -%}
+                      {%- endfor -%}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            {% endcomment %}
+          </div>
+        </div>
         {%- endif -%}
 
         <div class="container">
