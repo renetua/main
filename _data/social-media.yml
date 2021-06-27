@@ -4,7 +4,7 @@
 
 - name: facebook
   title: Facebook
-  url: https://www.facebook.com/groups/realestate.if.ua
+  url: https://www.facebook.com/site.realestate
   w: 23
   h: 23
 
@@ -38,8 +38,8 @@
 
 - name: website
   title: Вебсайт
-  url: https://www.realestate.if.ua/new
+  url: https://www.realestate.net.ua/new
 
 - name: email
   title: Електронна пошта
-  url: mailto:info@realestate.if.ua
+  url: mailto:info@realestate.net.ua
