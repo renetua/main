@@ -34,7 +34,7 @@ layout: compress
                       {%- assign regs = site.data.realestate | sort: 'navtitle' -%}
                       {%- for reg in regs -%}
                       {%- assign anhor = reg.url | split: "." | slice: 2, 4 | join: "." | replace: ".", "" -%}
-                      {% if region == "crimea-ua" %}
+                      {% if anhor == "crimeaua" %}
                         {%- assign treg = "Автономній Республіці Крим" -%}
                       {% else %}
                         {%- assign treg = reg.small | replace: "ька", "ькій" | replace: "ть", "ті" -%}
