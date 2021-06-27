@@ -1,9 +1,9 @@
 ---
-last_modified_at: 2021-06-27T21:49:51+02:00
+last_modified_at: 2021-06-11T23:50:22+02:00
 title: Нерухомість в України
 navhide: 1
 ---
-<h2 class="h4">Українська нерухомість</h2>
+<h1>Українська нерухомість</h1>
 <p>Кожен українець може безкоштовно подати запит та розмістити своє оголошення про продаж чи передачу в оренду своєї квартири, свого будинку, землі чи будь-яку іншу нерухомість, яка знаходиться в межах України у одному із нижче вказаних регіонів України.</p>
 {%- assign rs = site.data.realestate | sort: 'navtitle' -%}
 <div class="row row-cols-1 row-cols-md-2">
@@ -12,11 +12,11 @@ navhide: 1
     {%- assign region = r.url | split: "." | slice: 2, 4 | join: "." | replace: ".", "-" -%}
     {%- assign image = region | append: ".jpg" -%}
     {%- if r.url != site.url -%}
-    <div id="{{ region }}" class="col mb-4">
+    <div class="col mb-4">
       <div class="card">
         <img src="/assets/images/locations/{{ image }}" class="card-img-top" alt="Нерухомість у {{ r.navtitle | replace_first: "о", "і" }}">
         <div class="card-body p-2">
-          <h3 class="card-title mb-2 h5">{{ r.subtitle }} {{ site.data.lang-uk.re_ta }} {{ title }}</h3>
+          <h2 class="card-title mb-2 h5">{{ r.subtitle }} {{ site.data.lang-uk.re_ta }} {{ title }}</h2>
           <div class="card-text">
             <nav class="navbar navbar-expand-lg navbar-light bg-white p-0">
               <div class="navbar-brand d-lg-none">
