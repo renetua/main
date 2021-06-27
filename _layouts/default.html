@@ -21,9 +21,10 @@ layout: compress
 
         {% if page.url == "/" %}
             <div class="container pb-1 lead-badge">
-              <h1 class="h4">Безкоштовні оголошення про продаж і оренду нерухомого майна в регіонах України</h1>
+              <h1 class="h3">Безкоштовні оголошення про продаж і оренду нерухомого майна в регіонах України</h1>
               <a class="badge badge-primary" data-toggle="collapse" href="#collapseArea" role="button" aria-expanded="false" aria-controls="collapseArea" title="Місцевість де розташована нерухомість">Виберіть місцевіть</a> <span class="badge badge-light text-wrap text-left">де б ви хотіли <strong>знайти, купити чи продати нерухомість</strong></span>
             </div>
+            {% comment %}
             <div class="bg-light mb-3">
               <div class="container">
                 <div class="collapse" id="collapseArea">
@@ -52,6 +53,7 @@ layout: compress
                 </div>
               </div>
             </div>
+            {% endcomment %}
         {%- endif -%}
 
         <div class="container">
