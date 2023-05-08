@@ -7,7 +7,7 @@
         {%- assign regs = site.data.realestate | sort: 'navtitle' -%}
         {%- for reg in regs -%}
           {%- if reg.slug and reg.slug != '' -%}
-              <a href="{ reg.url | replace_first: 'www', 'add' }}" target="_blank" class="dropdown-item">{{ reg.small }}</a>
+              <a href="{{ reg.url | replace_first: 'www', 'add' }}" target="_blank" class="dropdown-item">{{ reg.small }}</a>
           {%- endif -%}
         {%- endfor -%}
       </div>
