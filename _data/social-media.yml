@@ -2,6 +2,10 @@
   title: Twitter
   url: https://twitter.com/realestate_ua
 
+- name: instagram
+  title: Instagram
+  url: https://www.instagram.com/realestate.net.ua
+
 - name: facebook
   title: Facebook
   url: https://www.facebook.com/site.realestate
@@ -36,9 +40,9 @@
   title: Telegram
   url: https://t.me/realestate_net
 
-- name: website
-  title: Вебсайт
-  url: https://www.realestate.net.ua/new
+# - name: website
+#   title: Вебсайт
+#   url: https://www.realestate.net.ua/new
 
 - name: email
   title: Електронна пошта
