@@ -1,9 +1,16 @@
+<div class="col-lg-4 order-2 order-lg-1 mt-3 mt-lg-1 mb-3 mb-lg-0 pr-lg-0">
+  <nav class="nav nav-masthead justify-content-end">
+    <a href="/contacts.html" class="nav-link">Контакти</a>
+    <a href="/services.html" class="nav-link">Послуги</a>
+    <a href="/terms-and-conditions.html" class="nav-link">Правила і умови</a>
+  </nav>
+</div>
 <div class="col-auto order-1 order-lg-2 text-right">
-  <div class="dropdown dropleft">
+  <div class="dropdown">
       <a href="#" class="btn btn-add btn-sm" role="button" data-toggle="dropdown" aria-expanded="false">
         {{ site.data.lang-uk.add_realestate }}
       </a>
-      <div class="dropdown-menu">
+      <div class="dropdown-menu dropdown-menu-right">
         {%- assign regs = site.data.realestate | sort: 'navtitle' -%}
         {%- for reg in regs -%}
           {%- if reg.slug and reg.slug != '' -%}
