@@ -40,7 +40,8 @@
   navtitle: місто Чернівці
   subtitle: Нерухомість в Чернівцях
   small: Чернівецька область
-  url: http://www.realestate.cv.ua
+  url: https://www.realestate.cv.ua
+  slug: chernivetska
 
 - title: Нерухомість в Тернопільській області
   navtitle: місто Тернопіль
