@@ -1,6 +1,6 @@
 <div class="col-lg-4 order-2 order-lg-1 mt-3 mt-lg-1 mb-3 mb-lg-0 pr-lg-0">
   <nav class="nav nav-masthead justify-content-end">
-    <a href="/" class="nav-link">Головна</a>
+    <a href="/index.html" class="nav-link">Головна</a>
     <a href="/contacts.html" class="nav-link">Контакти</a>
     <a href="/services.html" class="nav-link">Послуги</a>
     <a href="/terms-and-conditions.html" class="nav-link">Правила і умови</a>
@@ -8,6 +8,7 @@
 </div>
 <div class="col-auto order-1 order-lg-2 text-right">
   <div class="dropdown">
+      <a class="btn btn-success btn-sm mr-1" data-toggle="collapse" href="#collapseAreaSelect" role="button" aria-expanded="false" aria-controls="collapseAreaSelect" title="Місцевість де розташована нерухомість">Пошук місцевості</a>
       <a href="#" class="btn btn-add btn-sm" role="button" data-toggle="dropdown" aria-expanded="false">
         {{ site.data.lang-uk.add_realestate }}
       </a>
@@ -15,7 +16,7 @@
         {%- assign regs = site.data.realestate | sort: 'navtitle' -%}
         {%- for reg in regs -%}
           {%- if reg.slug and reg.slug != '' -%}
-              <a href="{{ reg.url | replace_first: 'www', 'add' }}" target="_blank" class="dropdown-item">{{ reg.small }}</a>
+            <a href="{{ reg.url | replace_first: 'www', 'add' }}" target="_blank" class="dropdown-item">{{ reg.small }}</a>
           {%- endif -%}
         {%- endfor -%}
       </div>
