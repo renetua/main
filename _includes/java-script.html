@@ -1,4 +1,4 @@
-{%- if page.dir == '/' and page.url contains '/' and page.url contains '/index.html' -%}
+{%- if page.dir == '/' and page.url contains '/' -%}
 <script src="{{ "/assets/js/main.home.js" | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>
 {%- else -%}
 <script src="{{ "/assets/js/main.js" | relative_url }}?v={{ site.time | date: '%Y%m%d%H%M%S' }}"></script>
