@@ -14,7 +14,7 @@ layout: compress
     <div class="main">
 
       {%- include header.html -%}
-      <main class="content my-4">
+      <main class="content{% if page.url == '/' and page.url == '/' %} my-4{% endif %}">
 
         {% if page.url == "/" and page.url == '/' %}
         <div class="container pb-1 lead-badge">
