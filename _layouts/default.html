@@ -3,7 +3,6 @@ layout: compress
 ---
 
 {%- capture fname -%}{%- include footer/contact.html legal="name" -%}{%- endcapture -%}
-
 <!doctype html>
 <html dir="ltr" lang="uk-UA">
   <head>
@@ -12,11 +11,9 @@ layout: compress
   <body>
 
     <div id="top"></div>
-
     <div class="main">
 
       {%- include header.html -%}
-
       <main class="content my-4">
 
         <div class="container">
@@ -28,11 +25,12 @@ layout: compress
           </div>
         </div>
 
-        {% if page.url == "/" %}
+        {% if page.url == "/" and page.url == '/' %}
         <div class="container pb-1 lead-badge">
           <h1 class="h3">Безкоштовні оголошення про продаж і оренду нерухомого майна в регіонах України</h1>
           <a class="badge badge-primary" data-toggle="collapse" href="#collapseArea" role="button" aria-expanded="false" aria-controls="collapseArea" title="Місцевість де розташована нерухомість">Виберіть місцевіть</a> <span class="badge badge-light text-wrap text-left">де б ви хотіли <strong>знайти, купити чи продати нерухомість</strong></span>
         </div>
+
         <div class="bg-light mb-3">
           <div class="container">
             <div class="collapse" id="collapseArea">
@@ -65,6 +63,7 @@ layout: compress
         {%- endif -%}
 
         <div class="container">
+          {%- if page.dir == '/' and page.url == '/' -%}{%- else -%}{%- include breadcrumb.html -%}{%- endif -%}
           {%- assign isContent = content | strip_newlines -%}
           {%- if isContent == '' -%}
             {%- include info-visitors.html -%}
@@ -74,13 +73,9 @@ layout: compress
         </div>
 
       </main>
-
       {%- include footer.html -%}
-
     </div>
-
     {%- include scroll-top.html -%}
     {%- include java-script.html -%}
-
   </body>
 </html>
