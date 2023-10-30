@@ -63,7 +63,7 @@ layout: compress
         {%- endif -%}
 
         <div class="container">
-          {%- if page.dir == '/' and page.url == '/' -%}{%- else -%}{%- include breadcrumb.html -%}{%- endif -%}
+          {%- include breadcrumb.html -%}
           {%- assign isContent = content | strip_newlines -%}
           {%- if isContent == '' -%}
             {%- include info-visitors.html -%}
