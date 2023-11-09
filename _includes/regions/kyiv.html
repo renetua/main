@@ -1,3 +1,7 @@
+{%- for option in site.data.kyiv -%}
+<option value="{{ option.url }}">{{ option.title }}</option>
+{%- endfor -%}
+{% comment %}
 <option value="https://www.realestate.kyiv.ua/region/city/berezan/">місто Березань</option>
 <option value="https://www.realestate.kyiv.ua/region/city/berezan/apartment/">місто Березань - Квартири</option>
 <option value="https://www.realestate.kyiv.ua/region/city/berezan/house/">місто Березань - Будинки</option>
@@ -134,3 +138,4 @@
 <option value="https://www.realestate.kyiv.ua/district/town/yahotyn/house/">місто Яготин - Будинки</option>
 <option value="https://www.realestate.kyiv.ua/district/town/yahotyn/rent/">місто Яготин - Оренда</option>
 <option value="https://www.realestate.kyiv.ua/region/kyivska/">Київська область</option>
+{% endcomment %}
