@@ -49,6 +49,16 @@ markdown: kramdown
 kramdown:
   auto_ids: false
 
+collections:
+  help:
+    output: true
+  stabs:
+    output: true
+  otabs:
+    output: true
+  owners:
+    output: true
+
 defaults:
   - scope:
       path: /*/data/*.json
@@ -61,7 +71,12 @@ defaults:
     values:
       layout: "post"
   - scope:
-      path: /*/news/
+      path: /articles/
+      type: "articles"
+    values:
+      layout: "articles"
+  - scope:
+      path: /news/
       type: "news"
     values:
       layout: "news"
@@ -73,7 +88,7 @@ defaults:
       path: ""
       type: "pages"
     values:
-      layout: "default"
+      layout:
 
 plugins:
   - jekyll-sitemap
