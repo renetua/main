@@ -1,5 +1,6 @@
 ---
 last_modified_at: 2023-10-30T17:02:55+02:00
+layout: default
 title: Послуги з управління нерухомістю
 navhide: 1
 ---
