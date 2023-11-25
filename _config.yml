@@ -50,6 +50,12 @@ kramdown:
   auto_ids: false
 
 collections:
+  docs:
+    output: true
+    permalink: /:collection/:name
+  lows:
+    output: true
+    permalink: /:collection/:name
   help:
     output: true
   stabs:
@@ -70,6 +76,16 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  - scope:
+      path: /docs/
+      type: "docs"
+    values:
+      layout: "docs"
+  - scope:
+      path: /laws/
+      type: "laws"
+    values:
+      layout: "laws"
   - scope:
       path: /articles/
       type: "articles"
