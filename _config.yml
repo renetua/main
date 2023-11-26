@@ -70,13 +70,12 @@ collections:
   docs:
     output: true
     permalink: /docs/:title
-    #permalink: /:collection/:name
-    #permalink: /:categories/:name
-    #permalink: /:collection/:path
-    #permalink: /:categories/:title:output_ext
   lows:
     output: true
-    permalink: /:collection/:name
+    permalink: /laws/:title
+  articles:
+    output: true
+    permalink: /articles/:title
   help:
     output: true
   stabs:
