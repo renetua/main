@@ -50,7 +50,7 @@ kramdown:
   auto_ids: false
 
 # Handling Reading
-#safe: false
+safe: false
 include:
   - .htaccess
   - _docs
