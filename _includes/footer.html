@@ -1,4 +1,4 @@
-<footer id="contacts"{% if page.url == '/' and page.dir == '/' %} class="mt-4"{% endif %}>
+<footer id="contacts"{% if page.url != '/' and page.dir != '/' %} class="mt-4"{% endif %}>
   <div class="container border-top-4 border-primary">
     {%- comment -%}
       {%- if page.url != '/' -%}
