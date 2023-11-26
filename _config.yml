@@ -72,7 +72,7 @@ collections:
     #permalink: /:collection/:name
     #permalink: /:categories/:name
     #permalink: /:collection/:path
-    permalink: /:categories/:title:output_ext
+    #permalink: /:categories/:title:output_ext
   lows:
     output: true
     permalink: /:collection/:name
