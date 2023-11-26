@@ -58,7 +58,8 @@ collections:
   docs:
     output: true
     #permalink: /:collection/:name
-    permalink: /:categories/:name
+    #permalink: /:categories/:name
+    permalink: /:collection/:path
   lows:
     output: true
     permalink: /:collection/:name
