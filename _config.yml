@@ -69,6 +69,7 @@ exclude:
 collections:
   docs:
     output: true
+    permalink: /docs/:title
     #permalink: /:collection/:name
     #permalink: /:categories/:name
     #permalink: /:collection/:path
