@@ -194,3 +194,10 @@ articles: статті
 articles_all: Усі статті
 articles_back_list: Повернутися до списку статтей
 articles_list_empty: Cтаттей поки що немає :(
+#
+# Docs
+#
+docs: документи
+docs_all: Усі документи
+docs_back_list: Повернутися до списку документи
+docs_list_empty: Документів поки що немає :(
