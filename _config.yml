@@ -53,8 +53,6 @@ kramdown:
 safe: false
 include:
   - .htaccess
-  - _docs
-  - _laws
 exclude:
   - .gitignore
   - README.md
@@ -67,15 +65,6 @@ exclude:
   - package.json
 
 collections:
-  # docs:
-  #   output: true
-  #   permalink: /docs/:title
-  # lows:
-  #   output: true
-  #   permalink: /laws/:title
-  # articles:
-  #   output: true
-  #   permalink: /articles/:title
   help:
     output: true
   stabs:
