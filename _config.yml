@@ -50,9 +50,9 @@ kramdown:
   auto_ids: false
 
 # Handling Reading
-safe: false
-include: [".htaccess","_docs","_laws"]
-exclude: ["README.md","node_modules",".sass-cashe","Gemfile","Gemfile.lock",".git/","Gruntfile.js","package.json"]
+#safe: false
+#include: [".htaccess","_docs","_laws"]
+#exclude: ["README.md","node_modules",".sass-cashe","Gemfile","Gemfile.lock",".git/","Gruntfile.js","package.json"]
 
 collections:
   docs:
