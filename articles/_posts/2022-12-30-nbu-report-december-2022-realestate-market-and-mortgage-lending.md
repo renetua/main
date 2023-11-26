@@ -4,6 +4,7 @@ date: 2022-12-30
 source:
   title: Національний Банк України
   url: https://bank.gov.ua/ua/news/all/zvit-pro-finansovu-stabilnist-gruden-2022-roku
+permalink: /articles/:title:output_ext
 ---
 
 ## Ринок нерухомості та іпотечне кредитування

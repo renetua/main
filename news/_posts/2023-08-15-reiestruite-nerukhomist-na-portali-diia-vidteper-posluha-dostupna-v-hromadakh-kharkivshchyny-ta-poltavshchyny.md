@@ -4,6 +4,7 @@ date: 2023-08-15
 source:
   title: Кабінет Міністрів України
   url: https://www.kmu.gov.ua/news/reiestruite-nerukhomist-na-portali-diia-vidteper-posluha-dostupna-v-hromadakh-kharkivshchyny-ta-poltavshchyny
+permalink: /news/:title:output_ext
 ---
 
 Зареєструвати нерухомість на порталі Дія тепер зможе ще більше українців. Послуга Державної реєстрації прав на нерухоме майно доступна в громадах Полтавської області та масштабується на Харківщині.

@@ -4,6 +4,7 @@ date: 2021-03-03
 source:
   title: Безоплатна правова допомога
   url: https://wiki.legalaid.gov.ua/
+permalink: /articles/:title:output_ext
 ---
 
 ### Визначення поняття

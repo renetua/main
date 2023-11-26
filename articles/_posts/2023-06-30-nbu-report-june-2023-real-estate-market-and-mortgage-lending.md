@@ -4,6 +4,7 @@ date: 2023-06-30
 source:
   title: Національний Банк України
   url: https://bank.gov.ua/ua/news/all/zvit-pro-finansovu-stabilnist-cherven-2023-roku
+permalink: /articles/:title:output_ext
 ---
 
 ## Ринок нерухомості та іпотечне кредитування

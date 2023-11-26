@@ -5,6 +5,7 @@ date: 2021-01-15
 source:
   title: Урядовий кур'єр
   url: https://ukurier.gov.ua
+permalink: /articles/:title:output_ext
 ---
 
 ## Програма молодіжного житлового кредитування економічно вигідна і громадянам, і державі
