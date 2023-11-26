@@ -51,8 +51,20 @@ kramdown:
 
 # Handling Reading
 #safe: false
-#include: [".htaccess","_docs","_laws"]
-#exclude: ["README.md","node_modules",".sass-cashe","Gemfile","Gemfile.lock",".git/","Gruntfile.js","package.json"]
+include:
+  - .htaccess
+  - _docs
+  - _laws
+exclude:
+  - .gitignore
+  - README.md
+  - node_modules
+  - .sass-cashe
+  - Gemfile
+  - Gemfile.lock
+  - .git/
+  - Gruntfile.js
+  - package.json
 
 collections:
   docs:
