@@ -15,10 +15,10 @@ layout: default
   <div class="col-12">
     {{ content }}
     {%- include news-list.html -%}
-    {%- include news-list.html -%}
+    {%- include pagination.html -%}
 
     {%- comment -%}
-    {% if paginator.total_pages > 1 %}
+      {% if paginator.total_pages > 1 %}
       <ul class="pager">
           {% if paginator.previous_page %}
           <li class="previous">
