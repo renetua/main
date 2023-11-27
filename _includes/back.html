@@ -1,6 +1,6 @@
 <hr>
 {%- assign back = page.url | split: "/" -%}
-{%- if back contains "news" or back contains "articles" -%}
+{%- if back contains "/news/" or back contains "/articles/" or back contains "/laws/" or back contains "/docs/" -%}
   {%- assign minus = 1 -%}
 {%- else -%}
   {%- assign minus = 1 -%}
@@ -20,7 +20,7 @@
 <hr>
 {%- assign back = page.url | split: "/" -%}
 {%- if back contains "news" or back contains "articles" or back contains "laws" or back contains "docs" -%}
-  {%- assign minus = 4 -%}
+  {%- assign minus = 1 -%}
 {%- else -%}
   {%- assign minus = 1 -%}
 {%- endif -%}
