@@ -1,5 +1,5 @@
 {%- assign news = '' | split:'' -%}
-{%- for i in paginator.site.categories[include.cat] -%}
+{%- for i in site.categories[include.cat] -%}
   {%- unless i.url contains "/articles/" or i.url contains "/laws/" or i.url contains "/docs/" -%}
     {%- assign news = news | push:i -%}
   {%- endunless -%}
