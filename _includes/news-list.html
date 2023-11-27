@@ -6,8 +6,8 @@
 {%- endfor -%}
 
 {%- comment -%}
-  {%- for article in paginator.news limit:site.pagination.per_page -%}
-  {%- for article in paginator.news limit:include.num -%}
+  {%- for article in paginator.news limit:site.pagination.per_page -%}{%- endfor -%}
+  {%- for article in paginator.news limit:include.num -%}{%- endfor -%}
 {%- endcomment -%}
 
 {%- for article in paginator.news -%}
