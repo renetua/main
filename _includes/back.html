@@ -1,16 +1,16 @@
 <hr>
 {%- assign back = page.url | split: "/" -%}
-{%- if back contains "news" or back contains "articles" -%}
-  {%- assign minus = 4 -%}
+{%- if back contains "/news/" or back contains "/articles/" or back contains "/laws/" or back contains "/docs/" -%}
+  {%- assign minus = 0 -%}
 {%- else -%}
   {%- assign minus = 1 -%}
 {%- endif -%}
 {%- assign size = back | size | minus:minus -%}
 <span class="mr-1">&larr;</span>
 <a href="{{ back | slice: 0, size | join: "/" }}/">
-  {%- if back contains "news" -%}
+  {%- if back contains "/news/" -%}
     {{ site.data.lang-uk.news_back_list }}
-  {%- elsif back contains "articles" -%}
+  {%- elsif back contains "/articles/" -%}
     {{ site.data.lang-uk.articles_back_list }}
   {%- else -%}
     {{ site.data.lang-uk.back_list }}
