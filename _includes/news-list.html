@@ -1,16 +1,18 @@
-{%- assign news = '' | split: '' -%}
-{%- for i in posts -%}
-  {%- unless i.url contains "/articles/" or i.url contains "/laws/" or i.url contains "/docs/" -%}
-    {%- assign news = news | push:i -%}
-  {%- endunless -%}
-{%- endfor -%}
-
 {%- comment -%}
+
+  {%- assign news = '' | split: '' -%}
+  {%- for i in site.categories[include.cat] -%}
+    {%- unless i.url contains "/articles/" or i.url contains "/laws/" or i.url contains "/docs/" -%}
+      {%- assign news = news | push:i -%}
+    {%- endunless -%}
+  {%- endfor -%}
+
   {%- for article in paginator.news limit:site.pagination.per_page -%}{%- endfor -%}
   {%- for article in paginator.news limit:include.num -%}{%- endfor -%}
+
 {%- endcomment -%}
 
-{%- for article in news -%}
+{%- for article in paginator.posts -%}
   {%- if forloop.first -%}
   <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 mx-n2">
   {%- endif -%}
