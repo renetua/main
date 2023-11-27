@@ -1,10 +1,4 @@
-{%- assign articles = '' | split:'' -%}
-{%- for i in site.categories[include.cat] -%}
-  {%- unless i.url contains "/news/" or i.url contains "/laws/" or i.url contains "/docs/" -%}
-    {%- assign articles = articles | push:i -%}
-  {%- endunless -%}
-{%- endfor -%}
-{%- for article in articles limit:include.num -%}
+{%- for article in paginator.posts -%}
   {%- if forloop.first -%}
   <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 mx-n2">
   {%- endif -%}
