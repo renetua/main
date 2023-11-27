@@ -5,7 +5,6 @@ date: 2021-04-11
 source:
   title: Мережа Вебсайтів Нерухомості в Україні
   url: https://www.realestate.net.ua
-permalink: /news/:title:output_ext
 ---
 
 ## Ура! Ми зробили це. Як кажуть у народі, другий пішов... :)
