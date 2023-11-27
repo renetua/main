@@ -1,6 +1,6 @@
 {% if paginator.total_pages > 1 %}
 <nav aria-label="Посторінкова навігація">
-  <ul class="pagination">
+  <ul class="pagination pagination-sm justify-content-end">
     {% if paginator.previous_page %}
     <li class="page-item">
       <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
