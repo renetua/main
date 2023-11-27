@@ -1,6 +1,6 @@
 {%- assign articles = '' | split:'' -%}
 {%- for i in site.categories[include.cat] -%}
-  {%- unless i.url contains "news" or i.url contains "laws" or i.url contains "docs" -%}
+  {%- unless i.url contains "/news/" or i.url contains "/laws/" or i.url contains "/docs/" -%}
     {%- assign articles = articles | push:i -%}
   {%- endunless -%}
 {%- endfor -%}
