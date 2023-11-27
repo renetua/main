@@ -4,7 +4,13 @@
     {%- assign news = news | push:i -%}
   {%- endunless -%}
 {%- endfor -%}
-{%- for article in news limit:include.num -%}
+
+{%- comment -%}
+  {%- for article in paginator.news limit:site.pagination.per_page -%}
+  {%- for article in paginator.news limit:include.num -%}
+{%- endcomment -%}
+
+{%- for article in paginator.news -%}
   {%- if forloop.first -%}
   <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 mx-n2">
   {%- endif -%}

@@ -45,6 +45,8 @@ contact:
   email: info@realestate.net.ua
   www: https://www.realestate.net.ua/
 
+safe: true
+
 markdown: kramdown
 kramdown:
   auto_ids: false
@@ -120,13 +122,18 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-get-json
 
+#
+# https://stackoverflow.com/questions/67493944/add-ellipses-to-pagination-using-jekyll-paginate-v2
+# https://copyprogramming.com/howto/how-to-paginate-categories-in-jekyll-with-github-pages
+# https://wowthemesnet.github.io/template-pintereso-bootstrap-jekyll/index.html
+# https://epsi-rns.gitlab.io/ssg/2020/06/22/jekyll-plain-plugin-pagination/
+#
 # Pagination Settings
 pagination:
   enabled: true
-  per_page: 3
-  offset: 2
+  per_page: 2
   permalink: '/page/:num/'
-  title: ':title - page :num of :max'
+  title: ' - page :num'
   limit: 0
   sort_field: 'date'
   sort_reverse: true
