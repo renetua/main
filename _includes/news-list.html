@@ -1,13 +1,13 @@
-{%- for article in paginator.posts -%}
+{%- for new in paginator.posts -%}
   {%- if forloop.first -%}
   <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 mx-n2">
   {%- endif -%}
     <div class="col mb-3 px-2">
       <div class="card h-100">
         <div class="card-body">
-          <p class="card-text"><span class="small text-muted">{%- include date.html date=article.date -%}</span></p>
-          <h5 class="card-title"><a href="{{ article.url }}">{{ article.title }}</a></h5>
-          <p class="card-text">{{ article.excerpt | strip_html | truncate: 110 }}</p>
+          <p class="card-text"><span class="small text-muted">{%- include date.html date=new.date -%}</span></p>
+          <h5 class="card-title"><a href="{{ new.url }}">{{ new.title }}</a></h5>
+          <p class="card-text">{{ new.excerpt | strip_html | truncate: 110 }}</p>
         </div>
       </div>
     </div>
