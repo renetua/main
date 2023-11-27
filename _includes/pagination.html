@@ -4,7 +4,7 @@
   <ul class="pagination">
     {% if paginator.previous_page %}
     <li class="page-item">
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+      <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
           <svg width="8" height="16" viewBox="0 0 8 13">
               <g fill="none" stroke="none" stroke-width="1" fill-rule="evenodd">
                   <g transform="translate(1.000000, 1.000000)" stroke="currentColor" stroke-width="2">
@@ -35,60 +35,60 @@
                 {% if forloop.first and page == paginator.page %}
                     <li class="page-item"><span class="active">{{ page }}</span></li>
                 {% elsif forloop.first %}
-                    <li class="page-item"><a href="/{{ include.cat }}/">1</a></li>
+                    <li class="page-item"><a class="page-link" href="/{{ include.cat }}/">1</a></li>
                 {% elsif page == paginator.page %}
                     <li class="page-item"><span class="active">{{ page }}</span></li>
                 {% else %}
-                    <li class="page-item"><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+                    <li class="page-item"><a class="page-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
                 {% endif %}
             {% else %}
                 {% if paginator.page == 5 %}
-                    <li class="page-item"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+                    <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
                 {% endif %}
                     <li class="page-item"><span>...</span></li>
-                    <li class="page-item"><a href="/{{ include.cat }}/{{ last_page }}/">{{ last_page }}</a></li>
+                    <li class="page-item"><a class="page-link" href="/{{ include.cat }}/{{ last_page }}/">{{ last_page }}</a></li>
                 {% break %}
             {% endif %}
         {% elsif paginator.page >= last_five %}
             {% if forloop.index >= last_five %}
                 {% if forloop.index == last_five %}
-                    <li class="page-item"><a href="/{{ include.cat }}/">1</a></li>
+                    <li class="page-item"><a class="page-link" href="/{{ include.cat }}/">1</a></li>
                     <li class="page-item"><span>...</span></li>
                 {% if page == last_five %}
-                    <li class="page-item"><a href="/{{ include.cat }}/{{ page | minus: 1 }}/">{{ page | minus: 1 }}</a></li>
+                    <li class="page-item"><a class="page-link" href="/{{ include.cat }}/{{ page | minus: 1 }}/">{{ page | minus: 1 }}</a></li>
                 {% endif %}
                 {% if page == paginator.page %}
                     <li class="page-item"><span class="active">{{ page }}</span></li>
                 {% else %}
-                    <li class="page-item"><a href="/{{ include.cat }}/{{ page }}/">{{ page }}</a></li>
+                    <li class="page-item"><a class="page-link" href="/{{ include.cat }}/{{ page }}/">{{ page }}</a></li>
                 {% endif %}
                 {% elsif forloop.last and page == paginator.page %}
                     <li class="page-item"><span class="active">{{ page }}</span></li>
                 {% elsif page == paginator.page %}
                     <li class="page-item"><span class="active">{{ page }}</span></li>
                 {% else %}
-                    <li class="page-item"><a href="/{{ include.cat }}/{{ page }}/">{{ page }}</a></li>
+                    <li class="page-item"><a class="page-link" href="/{{ include.cat }}/{{ page }}/">{{ page }}</a></li>
                 {% endif %}
             {% endif %}
         {% else %}
             {% if forloop.first %}
-                <li class="page-item"><a href="/{{ include.cat }}/">1</a></li>
+                <li class="page-item"><a class="page-link" href="/{{ include.cat }}/">1</a></li>
             {% endif %}
             {% if forloop.index == paginator.page | minus: 2 %}
                 <li class="page-item"><span>...</span></li>
-                <li class="page-item"><a href="/{{ include.cat }}/{{ page | minus: 2 }}/">{{ page | minus: 2 }}</a></li>
+                <li class="page-item"><a class="page-link" href="/{{ include.cat }}/{{ page | minus: 2 }}/">{{ page | minus: 2 }}</a></li>
             {% endif %}
             {% if forloop.index == paginator.page | minus: 1 %}
-                <li class="page-item"><a href="/{{ include.cat }}/{{ page | minus: 1 }}/">{{ page | minus: 1 }}</a></li>
+                <li class="page-item"><a class="page-link" href="/{{ include.cat }}/{{ page | minus: 1 }}/">{{ page | minus: 1 }}</a></li>
             {% endif %}
             {% if page == paginator.page %}
                 <li class="page-item"><span class="active">{{ page }}</span></li>
             {% endif %}
             {% if forloop.index == paginator.page | plus: 1 %}
-                <li class="page-item"><a href="/{{ include.cat }}/{{ page | plus: 1 }}/">{{ page | plus: 1 }}</a></li>
+                <li class="page-item"><a class="page-link" href="/{{ include.cat }}/{{ page | plus: 1 }}/">{{ page | plus: 1 }}</a></li>
             {% endif %}
             {% if forloop.index == paginator.page | plus: 2 %}
-                <li class="page-item"><a href="/{{ include.cat }}/{{ page | plus: 2 }}/">{{ page | plus: 2 }}</a></li>
+                <li class="page-item"><a class="page-link" href="/{{ include.cat }}/{{ page | plus: 2 }}/">{{ page | plus: 2 }}</a></li>
                 <li class="page-item"><span>...</span></li>
             {% endif %}
             {% if forloop.last %}
@@ -99,15 +99,15 @@
         {% if page == paginator.page %}
             <li class="page-item"><span class="active">{{ page }}</span></li>
         {% elsif page == 1 %}
-            <li class="page-item"><a href="/{{ include.cat }}/">{{ page }}</a></li>
+            <li class="page-item"><a class="page-link" href="/{{ include.cat }}/">{{ page }}</a></li>
         {% else %}
-            <li class="page-item"><a href="/{{ include.cat }}/{{ page }}/">{{ page }}</a></li>
+            <li class="page-item"><a class="page-link" href="/{{ include.cat }}/{{ page }}/">{{ page }}</a></li>
         {% endif %}
         {% endif %}
     {% endfor %}
     {% if paginator.next_page %}
     <li class="page-item">
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+      <a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
           <svg width="8" height="16" viewBox="0 0 8 13">
               <g fill="none" stroke="none" stroke-width="1" fill-rule="evenodd">
                   <g transform="translate(-2.000000, 4.000000)" stroke="currentColor" stroke-width="2">
@@ -134,312 +134,3 @@
 
 </nav>
 {% endif %}
-
-{%- comment -%}
-
-###
-
-{% if paginator.total_pages > 1 %}
-  <div class="wj-pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-    {% else %}
-      <span>&laquo; Prev</span>
-    {% endif %}
-
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <span class="active">{{ page }}</span>
-      {% elsif page == 1 %}
-        <a href="/">{{ page }}</a>
-      {% else %}
-        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-      {% endif %}
-    {% endfor %}
-
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-    {% else %}
-      <span>Next &raquo;</span>
-    {% endif %}
-  </div>
-{% endif %}
-
-###
-
-{% if paginator.total_pages > 1 %}
-    <div class="pagination">
-        {% if paginator.previous_page %}
-            <a href='{{ paginator.previous_page_path | prepend: site.baseurl }}' class='prev'>Previous</a>
-        {% endif %}
-
-        {% if paginator.page_trail %}
-            {% for trail in paginator.page_trail %}
-                <a href="{{ trail.path | prepend: site.baseurl | replace: '//', '/' | remove: "index.html" }}" class='{% if page.url == trail.path %}current{% endif %}'>{{ trail.num }}</a>
-            {% endfor %}
-        {% endif %}
-
-        {% if paginator.next_page %}
-            <a href='{{ paginator.next_page_path | prepend: site.baseurl }}' class='next'>Next</a>
-        {% endif %}
-    </div>
-{% endif %}
-
-###
-
-<div class="pagination">
-  {% if paginator.total_pages > 1 %}
-    <ul>
-      {% if paginator.previous_page %}
-        <li><a href="{{ paginator.previous_page_path | replace: '//', '/' }}">&lt;</a></li>
-      {% endif %}
-
-      {% for page in (1..paginator.total_pages) %}
-
-        {% assign last_five = forloop.length | minus: 4 %}
-        {% assign last_page = forloop.length %}
-
-        {% if forloop.length > 5 %}
-
-          {% if paginator.page <= 5 %}
-
-            {% if forloop.index <= 5 %}
-              {% if forloop.first and page == paginator.page %}
-                <li class="current-page"><span>{{ page }}</span></li>
-              {% elsif forloop.first %}
-                <li><a href="{{ page_root }}">1</a></li>
-              {% elsif page == paginator.page %}
-                <li class="current-page"><span>{{ page }}</span></li>
-              {% else %}
-                <li><a href="{{ page_path | append: page }}">{{ page }}</a></li>
-              {% endif %}
-            {% else %}
-              {% if paginator.page == 5 %}
-                <li><a href="{{ page_path }}6">6</a></li>
-              {% endif %}
-              <li>…</li>
-              <li><a href="{{ page_path | append: last_page }}">{{ last_page }}</a></li>
-              {% break %}
-            {% endif %}
-
-          {% elsif paginator.page >= last_five %}
-
-            {% if forloop.index >= last_five %}
-              {% if forloop.index == last_five %}
-                <li><a href="{{ page_root }}">1</a></li>
-                <li>…</li>
-                {% if page == last_five %}
-                  <li><a href="{{ page_path }}{{ page | minus: 1 }}">{{ page | minus: 1 }}</a></li>
-                {% endif %}
-                {% if page == paginator.page %}
-                  <li class="current-page"><span>{{ page }}</span></li>
-                {% else %}
-                  <li><a href="{{ page_path | append: page }}">{{ page }}</a></li>
-                {% endif %}
-              {% elsif forloop.last and page == paginator.page %}
-                <li class="current-page"><span>{{ page }}</span></li>
-              {% elsif page == paginator.page %}
-                <li class="current-page"><span>{{ page }}</span></li>
-              {% else %}
-                <li><a href="{{ page_path | append: page }}">{{ page }}</a></li>
-              {% endif %}
-            {% endif %}
-
-
-          {% else %}
-
-            {% if forloop.first %}
-              <li><a href="{{ page_root }}">1</a></li>
-            {% endif %}
-            {% if forloop.index == paginator.page | minus: 2 %}
-              <li>…</li>
-              <li><a href="{{ page | minus: 2 | prepend: page_path }}">{{ page | minus: 2 }}</a></li>
-            {% endif %}
-            {% if forloop.index == paginator.page | minus: 1 %}
-              <li><a href="{{ page | minus: 1 | prepend: page_path }}">{{ page | minus: 1 }}</a></li>
-            {% endif %}
-            {% if page == paginator.page %}
-              <li class="current-page"><span>{{ page }}</span></li>
-            {% endif %}
-            {% if forloop.index == paginator.page | plus: 1 %}
-              <li><a href="{{ page | plus: 1 | prepend: page_path }}">{{ page | plus: 1 }}</a></li>
-            {% endif %}
-            {% if forloop.index == paginator.page | plus: 2 %}
-              <li><a href="{{ page | plus: 2 | prepend: page_path }}">{{ page | plus: 2 }}</a></li>
-              <li>…</li>
-            {% endif %}
-            {% if forloop.last %}
-              <li><a href="{{ page_path | append: forloop.index }}">{{ forloop.index }}</a></li>
-            {% endif %}
-
-          {% endif %}
-
-        {% else %}
-
-          {% if page == paginator.page %}
-            <li class="current-page"><span>{{ page }}</span></li>
-          {% elsif page == 1 %}
-            <li><a href="{{ page_root }}">{{ page }}</a></li>
-          {% else %}
-            <li><a href="{{ page_path | append: page }}">{{ page }}</a></li>
-          {% endif %}
-
-        {% endif %}
-
-      {% endfor %}
-
-
-      {% if paginator.next_page %}
-        <li><a href="{{ paginator.next_page_path | replace: '//', '/' }}">&gt;</a></li>
-      {% endif %}
-    </ul>
-  {% endif %}
-</div>
-
-###
-
-{% if paginator.total_pages > 1 %}
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-          <svg width="8" height="16" viewBox="0 0 8 13">
-              <g fill="none" stroke="none" stroke-width="1" fill-rule="evenodd">
-                  <g transform="translate(1.000000, 1.000000)" stroke="currentColor" stroke-width="2">
-                      <polyline transform="translate(3.500000, 5.507797) rotate(90.000000) translate(-3.500000, -5.507797)" points="-1.5 3 3.5155939 8.0155939 8.5 3.0311879"></polyline>
-                  </g>
-              </g>
-          </svg>
-      </a>
-    {% else %}
-      <span class="active">
-          <svg width="8" height="16" viewBox="0 0 8 13">
-              <g fill="none" stroke="none" stroke-width="1" fill-rule="evenodd">
-                  <g transform="translate(1.000000, 1.000000)" stroke="currentColor" stroke-width="2">
-                      <polyline transform="translate(3.500000, 5.507797) rotate(90.000000) translate(-3.500000, -5.507797)" points="-1.5 3 3.5155939 8.0155939 8.5 3.0311879"></polyline>
-                  </g>
-              </g>
-          </svg>
-      </span>
-    {% endif %}
-    {% for page in (1..paginator.total_pages) %}
-    {% assign last_five = forloop.length | minus: 4 %}
-    {% assign last_page = forloop.length %}
-    {% if forloop.length > 5 %}
-        {% if paginator.page <= 5 %}
-            {% if forloop.index <= 5 %}
-                {% if forloop.first and page == paginator.page %}
-                    <span class="active">{{ page }}</span>
-                {% elsif forloop.first %}
-                    <a href="/">1</a>
-                {% elsif page == paginator.page %}
-                    <span class="active">{{ page }}</span>
-                {% else %}
-                    <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-                {% endif %}
-            {% else %}
-                {% if paginator.page == 5 %}
-                    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-                {% endif %}
-                    <span>...</span>
-                    <a href="/{{ include.cat }}/{{ last_page }}/">{{ last_page }}</a>
-                {% break %}
-            {% endif %}
-        {% elsif paginator.page >= last_five %}
-            {% if forloop.index >= last_five %}
-                {% if forloop.index == last_five %}
-                    <a href="/">1</a>
-                    <span>...</span>
-                {% if page == last_five %}
-                    <a href="/{{ include.cat }}/{{ page | minus: 1 }}/">{{ page | minus: 1 }}</a>
-                {% endif %}
-                {% if page == paginator.page %}
-                    <span class="active">{{ page }}</span>
-                {% else %}
-                    <a href="/{{ include.cat }}/{{ page }}/">{{ page }}</a>
-                {% endif %}
-                {% elsif forloop.last and page == paginator.page %}
-                    <span class="active">{{ page }}</span>
-                {% elsif page == paginator.page %}
-                    <span class="active">{{ page }}</span>
-                {% else %}
-                    <a href="/{{ include.cat }}/{{ page }}/">{{ page }}</a>
-                {% endif %}
-            {% endif %}
-        {% else %}
-            {% if forloop.first %}
-                <a href="/">1</a>
-            {% endif %}
-            {% if forloop.index == paginator.page | minus: 2 %}
-                <span>...</span>
-                <a href="/{{ include.cat }}/{{ page | minus: 2 }}/">{{ page | minus: 2 }}</a>
-            {% endif %}
-            {% if forloop.index == paginator.page | minus: 1 %}
-                <a href="/{{ include.cat }}/{{ page | minus: 1 }}/">{{ page | minus: 1 }}</a>
-            {% endif %}
-            {% if page == paginator.page %}
-                <span class="active">{{ page }}</span>
-            {% endif %}
-            {% if forloop.index == paginator.page | plus: 1 %}
-                <a href="/{{ include.cat }}/{{ page | plus: 1 }}/">{{ page | plus: 1 }}</a>
-            {% endif %}
-            {% if forloop.index == paginator.page | plus: 2 %}
-                <a href="/{{ include.cat }}/{{ page | plus: 2 }}/">{{ page | plus: 2 }}</a>
-                <span>...</span>
-            {% endif %}
-            {% if forloop.last %}
-                <a href="/{{ include.cat }}/{{ forloop.index }}/">{{ forloop.index }}</a>
-            {% endif %}
-          {% endif %}
-        {% else %}
-        {% if page == paginator.page %}
-            <span class="active">{{ page }}</span>
-        {% elsif page == 1 %}
-            <a href="/">{{ page }}</a>
-        {% else %}
-            <a href="/{{ include.cat }}/{{ page }}/">{{ page }}</a>
-        {% endif %}
-        {% endif %}
-    {% endfor %}
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-          <svg width="8" height="16" viewBox="0 0 8 13">
-              <g fill="none" stroke="none" stroke-width="1" fill-rule="evenodd">
-                  <g transform="translate(-2.000000, 4.000000)" stroke="currentColor" stroke-width="2">
-                      <polyline transform="translate(5.500000, 2.500000) rotate(90.000000) translate(-5.500000, -2.500000)" points="10.5 5 5.5 6.66133815e-16 0.5 5"></polyline>
-                  </g>
-              </g>
-          </svg>
-      </a>
-    {% else %}
-      <span class="active">
-          <svg width="8" height="16" viewBox="0 0 8 13">
-              <g fill="none" stroke="none" stroke-width="1" fill-rule="evenodd">
-                  <g transform="translate(-2.000000, 4.000000)" stroke="currentColor" stroke-width="2">
-                      <polyline transform="translate(5.500000, 2.500000) rotate(90.000000) translate(-5.500000, -2.500000)" points="10.5 5 5.5 6.66133815e-16 0.5 5"></polyline>
-                  </g>
-              </g>
-          </svg>
-      </span>
-    {% endif %}
-  </div>
-{% endif %}
-
-###
-
-<div class="pagination">
-    {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="prev">Previous</a>
-    {% else %}
-    <span class="prev">Previous</span>
-    {% endif %}
-    <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-    {% else %}
-    <span class="next">Next</span>
-    {% endif %}
-</div>
-
-###
-
-{%- endcomment -%}
