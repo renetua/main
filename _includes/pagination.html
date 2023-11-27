@@ -35,7 +35,7 @@
                 {% if forloop.first and page == paginator.page %}
                     <li class="page-item"><span class="active">{{ page }}</span></li>
                 {% elsif forloop.first %}
-                    <li class="page-item"><a href="/">1</a></li>
+                    <li class="page-item"><a href="/{{ include.cat }}/">1</a></li>
                 {% elsif page == paginator.page %}
                     <li class="page-item"><span class="active">{{ page }}</span></li>
                 {% else %}
@@ -52,7 +52,7 @@
         {% elsif paginator.page >= last_five %}
             {% if forloop.index >= last_five %}
                 {% if forloop.index == last_five %}
-                    <li class="page-item"><a href="/">1</a></li>
+                    <li class="page-item"><a href="/{{ include.cat }}/">1</a></li>
                     <li class="page-item"><span>...</span></li>
                 {% if page == last_five %}
                     <li class="page-item"><a href="/{{ include.cat }}/{{ page | minus: 1 }}/">{{ page | minus: 1 }}</a></li>
@@ -72,7 +72,7 @@
             {% endif %}
         {% else %}
             {% if forloop.first %}
-                <li class="page-item"><a href="/">1</a></li>
+                <li class="page-item"><a href="/{{ include.cat }}/">1</a></li>
             {% endif %}
             {% if forloop.index == paginator.page | minus: 2 %}
                 <li class="page-item"><span>...</span></li>
@@ -99,7 +99,7 @@
         {% if page == paginator.page %}
             <li class="page-item"><span class="active">{{ page }}</span></li>
         {% elsif page == 1 %}
-            <li class="page-item"><a href="/">{{ page }}</a></li>
+            <li class="page-item"><a href="/{{ include.cat }}/">{{ page }}</a></li>
         {% else %}
             <li class="page-item"><a href="/{{ include.cat }}/{{ page }}/">{{ page }}</a></li>
         {% endif %}
