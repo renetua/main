@@ -21,7 +21,8 @@
           </svg>
       </span>
     {% endif %}
-    {% for page in (1..paginator.total_pages) %}
+    {% for page in (1..paginator.total_pages)
+      {{ page.url }}<br/>
     {% assign last_five = forloop.length | minus: 4 %}
     {% assign last_page = forloop.length %}
     {% if forloop.length > 5 %}
