@@ -1,6 +1,5 @@
 {% if paginator.total_pages > 1 %}
 <nav aria-label="Посторінкова навігація">
-
   <ul class="pagination">
     {% if paginator.previous_page %}
     <li class="page-item">
@@ -14,7 +13,7 @@
           </svg>
       </a>
     {% else %}
-    <li class="page-item active">
+    <li class="page-item">
       <span class="page-link">
           <svg width="8" height="16" viewBox="0 0 8 13">
               <g fill="none" stroke="none" stroke-width="1" fill-rule="evenodd">
@@ -63,7 +62,7 @@
                     <li class="page-item"><a class="page-link" href="/{{ include.cat }}/{{ page }}/">{{ page }}</a></li>
                 {% endif %}
                 {% elsif forloop.last and page == paginator.page %}
-                    <li class="page-item"><span class="page-link active">{{ page }}</span></li>
+                    <li class="page-item active"><span class="page-link">{{ page }}</span></li>
                 {% elsif page == paginator.page %}
                     <li class="page-item active"><span class="page-link">{{ page }}</span></li>
                 {% else %}
@@ -131,6 +130,5 @@
     </li>
     {% endif %}
   </ul>
-
 </nav>
 {% endif %}
