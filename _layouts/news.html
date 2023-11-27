@@ -15,7 +15,7 @@ layout: default
   <div class="col-12">
     {{ content }}
     {%- include news-list.html -%}
-    {%- include pagination.html -%}
+    {%- include pagination.html cat=page.pagination.category-%}
 
     {%- comment -%}
       {% if paginator.total_pages > 1 %}
