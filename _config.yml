@@ -134,8 +134,8 @@ plugins:
 # Pagination Settings
 pagination:
   enabled: true
-  per_page: 2
-  permalink: '/page/:num/'
+  per_page: 6
+  permalink: '/:num/'
   title: ' - page :num'
   limit: 0
   sort_field: 'date'
