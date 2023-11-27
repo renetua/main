@@ -1,6 +1,7 @@
 {% if paginator.total_pages > 1 %}
+<nav aria-label="Page navigation example">
 
-  <div class="pagination">
+  <ul class="pagination">
     {% if paginator.previous_page %}
       <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
           <svg width="8" height="16" viewBox="0 0 8 13">
@@ -69,40 +70,41 @@
             {% endif %}
         {% else %}
             {% if forloop.first %}
-                <a href="/">1</a>
+                <li class="page-item"><a href="/">1</a></li>
             {% endif %}
             {% if forloop.index == paginator.page | minus: 2 %}
-                <span>...</span>
-                <a href="/{{ include.cat }}/{{ page | minus: 2 }}/">{{ page | minus: 2 }}</a>
+                <li class="page-item"><span>...</span></li>
+                <li class="page-item"><a href="/{{ include.cat }}/{{ page | minus: 2 }}/">{{ page | minus: 2 }}</a></li>
             {% endif %}
             {% if forloop.index == paginator.page | minus: 1 %}
-                <a href="/{{ include.cat }}/{{ page | minus: 1 }}/">{{ page | minus: 1 }}</a>
+                <li class="page-item"><a href="/{{ include.cat }}/{{ page | minus: 1 }}/">{{ page | minus: 1 }}</a></li>
             {% endif %}
             {% if page == paginator.page %}
-                <span class="active">{{ page }}</span>
+                <li class="page-item"><span class="active">{{ page }}</span></li>
             {% endif %}
             {% if forloop.index == paginator.page | plus: 1 %}
-                <a href="/{{ include.cat }}/{{ page | plus: 1 }}/">{{ page | plus: 1 }}</a>
+                <li class="page-item"><a href="/{{ include.cat }}/{{ page | plus: 1 }}/">{{ page | plus: 1 }}</a></li>
             {% endif %}
             {% if forloop.index == paginator.page | plus: 2 %}
-                <a href="/{{ include.cat }}/{{ page | plus: 2 }}/">{{ page | plus: 2 }}</a>
-                <span>...</span>
+                <li class="page-item"><a href="/{{ include.cat }}/{{ page | plus: 2 }}/">{{ page | plus: 2 }}</a></li>
+                <li class="page-item"><span>...</span></li>
             {% endif %}
             {% if forloop.last %}
-                <a href="/{{ include.cat }}/{{ forloop.index }}/">{{ forloop.index }}</a>
+                <li class="page-item"><a href="/{{ include.cat }}/{{ forloop.index }}/">{{ forloop.index }}</a></li>
             {% endif %}
           {% endif %}
         {% else %}
         {% if page == paginator.page %}
-            <span class="active">{{ page }}</span>
+            <li class="page-item"><span class="active">{{ page }}</span></li>
         {% elsif page == 1 %}
-            <a href="/">{{ page }}</a>
+            <li class="page-item"><a href="/">{{ page }}</a></li>
         {% else %}
-            <a href="/{{ include.cat }}/{{ page }}/">{{ page }}</a>
+            <li class="page-item"><a href="/{{ include.cat }}/{{ page }}/">{{ page }}</a></li>
         {% endif %}
         {% endif %}
     {% endfor %}
     {% if paginator.next_page %}
+    <li class="page-item">
       <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
           <svg width="8" height="16" viewBox="0 0 8 13">
               <g fill="none" stroke="none" stroke-width="1" fill-rule="evenodd">
@@ -112,7 +114,9 @@
               </g>
           </svg>
       </a>
+    </li>
     {% else %}
+    <li class="page-item">
       <span class="active">
           <svg width="8" height="16" viewBox="0 0 8 13">
               <g fill="none" stroke="none" stroke-width="1" fill-rule="evenodd">
@@ -122,8 +126,11 @@
               </g>
           </svg>
       </span>
+    </li>
     {% endif %}
-  </div>
+  </ul>
+
+</nav>
 {% endif %}
 
 {%- comment -%}
