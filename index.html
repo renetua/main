@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2023-11-26T23:48:59+02:00
+last_modified_at: 2023-11-28T23:48:59+02:00
 layout: default
 title: Нерухомість в Україні
 navhide: 1
@@ -7,7 +7,6 @@ navhide: 1
 <h2 class="h4">Українська нерухомість</h2>
 <p>Кожен українець може безкоштовно подати запит та розмістити своє оголошення про продаж чи передачу в оренду своєї квартири, свого будинку, землі чи будь-яку іншу нерухомість, яка знаходиться в межах України у одному із нижче вказаних регіонів України.</p>
 {%- assign rs = site.data.realestate | sort: 'navtitle' -%}
-
 {% if page.url == "/" and page.url == '/' %}
 <div class="alert alert-danger mb-3 alert-dismissible fade show" role="alert">
   <p class="h5 mb-0">Слава Україні! Героям слава! Слава Збройним Силам України! Смерть ворогам! Україна понад усе!</p>
@@ -39,7 +38,6 @@ navhide: 1
   </ul>
 </nav>
 {%- endif -%}
-
 <div class="row row-cols-1 row-cols-md-2">
   {%- for r in rs -%}
     {%- assign title = r.title | split: " " | slice: 1, 4 | join: " " -%}

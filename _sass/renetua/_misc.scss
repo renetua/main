@@ -79,3 +79,13 @@ table#property tr:not(.detail-view) { cursor: pointer; }
 #list-offer .col { display: none; }
 
 #add-form label { font-weight: 600; }
+
+// main a.list-group-item:hover, footer a.list-group-item:hover, .text-shadow a.text-white:hover {
+//   transition: unset;
+//   border-bottom: 1px solid rgba(0,0,0,0.125);
+// }
+
+main a.list-group-item:hover, .text-shadow a.text-white:hover {
+  transition: unset;
+  border-bottom: 1px solid rgba(0,0,0,0.125);
+}
