@@ -13,7 +13,7 @@
   {%- endif -%}
   {%- if ng.title != '' and ng.url != '' -%}
     {%- if page.dir == ng.url or page.url contains ng.url -%}
-      <span class="nav-item active"><a class="nav-link pt-0 pl-0 pr-1 border-0" href="{{ ng.url }}"><span>{{ ng.title }}</span></a></span>
+      <li class="nav-item"><span class="nav-link pt-0 pl-0 pr-1 border-0 active"><span>{{ ng.title }}</span></span></li>
     {%- else -%}
       <li class="nav-item"><a class="nav-link pt-0 pl-0 pr-1 border-0" href="{{ ng.url }}"><span>{{ ng.title }}</span></a></li>
     {%- endif -%}
