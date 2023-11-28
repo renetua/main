@@ -6,7 +6,7 @@ date: 2023-11-28
 source:
   title: Державна податкова служба України
   url: https://cabinet.tax.gov.ua/
-permalink: /laws/:title:output_ext
+permalink: /docs/:title:output_ext
 ---
 
 Тут ви можете [знайти і завантажити та роздрукувати](https://cabinet.tax.gov.ua/form) різноманітні податкові форми звітності для подання до Державної податкової служби України...
