@@ -13,32 +13,7 @@ navhide: 1
   <p class="mb-0">Відкритий воєнний напад московії (росії), за підтримки білорусі, на Україну, розпочатий о 5-ті годині ранку 24 лютого 2022 року. Вторгнення є частиною російсько-української війни, розв'язаної московією (росією) 2014 року, участь у якій московія (росія) постійно заперечувала.</p>
   <button type="button" class="close" data-dismiss="alert" aria-label="Закрити"><span aria-hidden="true">&times;</span></button>
 </div>
-{%- for ng in site.data.navgroup -%}
-  {%- if forloop.first -%}
-  <nav class="navbar navbar-expand-lg navbar-light bg-white p-0 mb-2 justify-content-end" aria-label="Інформаційне розділи">
-     <div class="navbar-brand d-lg-none">
-       <span class="small">{{ site.data.lang-uk.re_select_section }}</span>
-       <span class="ml-1 float-right align-middle text-primary">&rarr;</span>
-     </div>
-     <button class="navbar-toggler ml-1 shadow-none collapsed" type="button" data-toggle="collapse" data-target="#navbar-info-realEstate" aria-controls="navbar-info-realEstate" aria-expanded="false" aria-label="{{ site.data.lang-uk.re_toggle_button }}">
-       <span class="navbar-toggler-icon"></span>
-     </button>
-     <div class="navbar-collapse justify-content-end collapse" id="navbar-info-realEstate">
-       <ul class="navbar-nav nav nav-tabs border-0" id="info-realestate" role="list">
-  {%- endif -%}
-  {%- if ng.title != '' and ng.url != '' -%}
-    {%- if page.dir == ng.url or page.url contains ng.url -%}
-      <span class="nav-item active"><a class="nav-link pt-0 pl-0 pr-1 border-0" href="{{ ng.url }}"><span>{{ ng.title }}</span></a></span>
-    {%- else -%}
-      <li class="nav-item"><a class="nav-link pt-0 pl-0 pr-1 border-0" href="{{ ng.url }}"><span>{{ ng.title }}</span></a></li>
-    {%- endif -%}
-  {%- endif -%}
-  {%- if forloop.last -%}
-      </ul>
-    </div>
-  </nav>
-  {%- endif -%}
-{%- endfor -%}
+{%- include navbarinfo.html -%}
 {%- endif -%}
 <div class="row row-cols-1 row-cols-md-2">
   {%- for r in rs -%}
