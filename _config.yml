@@ -88,26 +88,6 @@ defaults:
     values:
       layout: "post"
   - scope:
-      path: /docs/
-      type: "docs"
-    values:
-      layout: "docs"
-  - scope:
-      path: /laws/
-      type: "laws"
-    values:
-      layout: "laws"
-  - scope:
-      path: /articles/
-      type: "articles"
-    values:
-      layout: "articles"
-  - scope:
-      path: /news/
-      type: "news"
-    values:
-      layout: "news"
-  - scope:
       path: "assets/images"
     values:
       image: true
@@ -122,6 +102,8 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-get-json
 
+#
+# https://github.com/timble/jekyll-pagination
 #
 # https://github.com/epsi-rns/epsi-rns.github.io/tree/master/_includes/pagination-v2
 # https://stackoverflow.com/questions/67493944/add-ellipses-to-pagination-using-jekyll-paginate-v2
