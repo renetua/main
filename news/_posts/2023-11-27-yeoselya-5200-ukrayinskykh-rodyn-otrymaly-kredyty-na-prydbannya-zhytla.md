@@ -4,7 +4,7 @@ title: 5200 українських родин отримали кредити н
 date: 2023-11-27
 source:
   title: Міністерство економіки України
-  url: https://www.me.gov.ua/
+  url: https://www.me.gov.ua
 permalink: /news/:title:output_ext
 ---
 

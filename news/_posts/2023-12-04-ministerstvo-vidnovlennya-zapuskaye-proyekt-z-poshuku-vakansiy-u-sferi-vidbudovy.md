@@ -4,7 +4,7 @@ title: Міністерство відновлення запускає проє
 date: 2023-12-04
 source:
   title: Міністерство розвитку громад, територій та інфраструктури України
-  url: https://mtu.gov.ua/
+  url: https://mtu.gov.ua
 permalink: /news/:title:output_ext
 ---
 
