@@ -40,7 +40,7 @@
               div.append('<div class="card mb-2"><div class="card-body p-2"><strong>{{ site.data.lang-uk.re_sell }} <span class="text-lowercase">' + data[i].type + '</span></strong> загальною площею ' + data[i].surface + '&nbsp;м<sup>2</sup>, кімнат ' + data[i].rooms + ', поверхів ' + data[i].floor + ' за адресою ' + data[i].address + '' + reAdsLocation() + '' + reAdsRegion() + ', ' + reAdsPrice() + ', ' + reAdsTel() + '</div></div>');
             }
           } else {
-            div.append('<div class="alert alert-success mb-0" role="alert"> <a href="#" class="alert-link">Додати&nbsp;оголошення</a> про нерухомість у ....</div>');
+            div.append('<div class="alert alert-success mb-0" role="alert"><a href="{{ sr.url }}" class="alert-link">Додати&nbsp;оголошення</a>  про {{ sr.title | replace_first: "Н", "н" }}</div>');
           }
         }
         div.append();
@@ -48,11 +48,11 @@
         while (counter < number) { var i = Math.floor(Math.random() * count); if (random.indexOf(i) == "-1") { if (counter == (number - 1)) { reAdsType(); } else { reAdsType(); } random.push(i); counter++; } }
       }).fail(function() {
         var div = $("#{{ region }}");
-        div.append('<div class="alert alert-success mb-0" role="alert"> <a href="{{ sr.url }}" class="alert-link">Додати&nbsp;оголошення</a> про нерухомість у ....</div>');
+        div.append('<div class="alert alert-success mb-0" role="alert"><a href="{{ sr.url }}" class="alert-link">Додати&nbsp;оголошення</a>  про {{ sr.title | replace_first: "Н", "н" }}</div>');
       });
     }
     $(document).ready(function() { {{ region | remove: "-" }}Random(); });
   {%- else -%}
-    document.getElementById("{{ region }}").innerHTML = '<div class="alert alert-success mb-0" role="alert"> <a href="{{ sr.url }}" class="alert-link">Додати&nbsp;оголошення</a> про {{ sr.title | replace_first: 'Н', 'н' }}</div>';
+    document.getElementById("{{ region }}").innerHTML = '<div class="alert alert-success mb-0" role="alert"><a href="{{ sr.url }}" class="alert-link">Додати&nbsp;оголошення</a> про {{ sr.title | replace_first: "Н", "н" }}</div>';
   {%- endif -%}
 {%- endfor -%}
