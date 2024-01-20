@@ -132,13 +132,13 @@ pagination:
 
 jekyll_get_json:
   # Get all
-  - data: auz
+  - data: uzua
     json: 'https://www.realestate.uz.ua/region/zakarpatska/data/all.json'
     cache: true
-  - data: aod
+  - data: odua
     json: 'https://www.realestate.od.ua/region/odeska/data/all.json'
     cache: true
-  - data: acv
+  - data: cvua
     json: 'https://www.realestate.cv.ua/region/chernivetska/data/all.json'
     cache: true
   # Get options
