@@ -1,0 +1,10 @@
+{%- assign more = site.data.lang-uk.re_more_ads | split: ',' | sample | append: site.data.lang-uk.re_ads -%}
+{% capture linkPage %}, <a href="{{ r.url }}/{{ offer.phone }}" target="_blank" aria-label="{{ site.data.lang-uk.re_page_ads }}"><span aria-hidden="true" data-toggle="tooltip" data-placement="top" title="" data-original-title="{{ site.data.lang-uk.re_page }}">{{ site.data.lang-uk.lang-re_page_ads }}</span></a>{% endcapture %}
+{% capture linkPost %}, <a href="{{ offer.link | prepend: r.url }}" aria-label="{{ more }}">{{ more }}</a>{% endcapture %}
+{%- include price-name.html -%}
+{%- include price.html -%}
+{%- include start-ads.html -%}
+{%- include body-ads.html -%}
+{%- if offer.page and offer.page == '1' -%}{{ linkPage }}.
+{%- elsif offer.link and offer.link != '' -%}{{ linkPost }}.
+{%- else -%}{%- endif -%}

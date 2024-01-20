@@ -71,7 +71,23 @@ navhide: 1
             <hr class="m-0">
             <div class="tab-content" id="{{ region }}-realestate-content">
               <div class="tab-pane pt-2 fade show{% if r.slug and r.slug != '' %} active{% else %}{% endif %}" id="{{ region }}-recently" role="tabpanel" aria-labelledby="{{ region }}-recently-tab">
-                <div id="{{ region }}"></div>
+                {%- assign d = region | remove: '-' -%}
+                {%- if site.data[d].size > 0 -%}
+                  {%- for offer in site.data[d] limit: 3 -%}
+                    <div class="card mb-2">
+                      <article class="card-body p-2" role="presentation">{%- include card.html -%}</article>
+                    </div>
+                    {%- if forloop.last -%}
+                      <div class="row">
+                        <div class="col-auto ml-auto">
+                          <a class="btn btn-primary btn-sm" href="{{ r.url }}">Інші {{ site.data[d].size }} пропозиції нерухомості</a>
+                        </div>
+                      </div>
+                    {%- endif -%}
+                  {%- endfor -%}
+                {%- else -%}
+                  <div id="{{ region }}"></div>
+                {%- endif -%}
               </div>
               <div class="tab-pane pt-3 fade show{% if r.slug and r.slug != '' %}{% else %} active{% endif %}" id="{{ region }}-about" role="tabpanel" aria-labelledby="{{ region }}-about-tab">
                 <p>{{ site.data.lang-uk.www }} <strong>{{ r.url | remove: 'http://' | remove: 'https://' }}</strong> {{ site.data.lang-uk.description_site }} {{ r.navtitle | replace_first: 'о', 'і' }} {{ site.data.lang-uk.re_ta }} {{ title }}.</p>
