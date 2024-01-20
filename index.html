@@ -77,7 +77,7 @@ navhide: 1
                 <p>{{ site.data.lang-uk.www }} <strong>{{ r.url | remove: 'http://' | remove: 'https://' }}</strong> {{ site.data.lang-uk.description_site }} {{ r.navtitle | replace_first: 'о', 'і' }} {{ site.data.lang-uk.re_ta }} {{ title }}.</p>
                 <p>Будь-хто, хто має нерухомість, чи професійно займається нерухомістю у цьому регіоні може безоплатно розмістити своє оголошення про купівлю-продаж і оренду нерухомості, яка знаходиться {{ title }}.</p>
                 <p>Якщо у вас є новини про нерухомість {{ title }} або ви пишете статті про нерухомість, <a href="#contacts">надсилайте нам</a> і ми залюбки їх опублікуємо на сторінці "<strong>{{ site.title }}</strong>" - <strong>{{ r.small }}</strong> - це безкоштовно.</p>
-                {%- if r.slug and r.slug !='' -%}<p><a href="{{ r.url }}/add">Подати безкоштовне оголошення</a> {{ title }}.</p>{%- endif -%}
+                {%- if r.slug and r.slug !='' -%}<p><a href="{{ r.url | replace_first: 'www', 'add' }}">Подати безкоштовне оголошення</a> {{ title }}.</p>{%- endif -%}
               </div>
             </div>
           </div>
