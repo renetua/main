@@ -4,5 +4,8 @@ Disallow: /*/data/*
 Disallow: /*/data/
 Disallow: /*/data/*.json
 Disallow: *.json
+Disallow: *.yml
+Disallow: *.md
+Disallow: *CNAME
 Disallow: /404.html
 Sitemap: https://www.realestate.net.ua/sitemap.xml

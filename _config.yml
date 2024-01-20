@@ -131,6 +131,17 @@ pagination:
   sort_reverse: true
 
 jekyll_get_json:
+  # Get all
+  - data: auz
+    json: 'https://www.realestate.uz.ua/region/zakarpatska/data/all.json'
+    cache: true
+  - data: aod
+    json: 'https://www.realestate.od.ua/region/odeska/data/all.json'
+    cache: true
+  - data: acv
+    json: 'https://www.realestate.cv.ua/region/chernivetska/data/all.json'
+    cache: true
+  # Get options
   - data: kyiv
     json: 'https://www.realestate.kyiv.ua/region/data/options.json'
     cache: true
