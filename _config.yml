@@ -98,9 +98,15 @@ defaults:
       layout:
 
 plugins:
+  - jekyll-compress-images
   - jekyll-sitemap
   - jekyll-paginate-v2
   - jekyll-get-json
+
+imageoptim:
+  pngout: false
+  svgo: true
+  verbose: false
 
 #
 # https://github.com/timble/jekyll-pagination
@@ -158,6 +164,9 @@ jekyll_get_json:
 
 sass:
   style: compressed
+
+compress_images:
+  images_path: "assets/images/**/*.{png,jpg,jpeg,svg}"
 
 compress_html:
   clippings: all
