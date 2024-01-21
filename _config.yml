@@ -108,19 +108,6 @@ imageoptim:
   svgo: true
   verbose: false
 
-#
-# https://github.com/timble/jekyll-pagination
-#
-# https://github.com/epsi-rns/epsi-rns.github.io/tree/master/_includes/pagination-v2
-# https://stackoverflow.com/questions/67493944/add-ellipses-to-pagination-using-jekyll-paginate-v2
-# https://copyprogramming.com/howto/how-to-paginate-categories-in-jekyll-with-github-pages
-# https://wowthemesnet.github.io/template-pintereso-bootstrap-jekyll/index.html
-# https://epsi-rns.gitlab.io/ssg/2020/06/22/jekyll-plain-plugin-pagination/
-# https://ajclarkson.co.uk/blog/jekyll-category-post-navigation/
-# https://gist.github.com/runemadsen/6263974
-# https://github.com/octopress/paginate
-#
-# Pagination Settings
 pagination:
   enabled: true
   per_page: 6
@@ -132,6 +119,9 @@ pagination:
 
 jekyll_get_json:
   # Get all
+  - data: ltua
+    json: 'https://www.realestate.lt.ua/region/volynska/data/all.json'
+    cache: true
   - data: uzua
     json: 'https://www.realestate.uz.ua/region/zakarpatska/data/all.json'
     cache: true
