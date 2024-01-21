@@ -9,8 +9,8 @@ country: Україна
 region: Україна
 region_size: .89rem
 
-usd: 38.70
-eur: 42.40
+usd: 38.19
+eur: 41.61
 
 title: Мережа Вебсайтів Нерухомості
 keywords: житло, квартира, нерухомість продам будинок, продаю гараж, продаємо житло, здається квартира, продаж житла, оренда квартир, квартира подобово, продати будинок, продамо землю, земля продається, продаю квартиру, здаю житло
@@ -119,6 +119,9 @@ pagination:
 
 jekyll_get_json:
   # Get all
+  - data: inua
+    json: 'https://www.realestate.in.ua/region/lvivska/data/all.json'
+    cache: true
   - data: ltua
     json: 'https://www.realestate.lt.ua/region/volynska/data/all.json'
     cache: true
