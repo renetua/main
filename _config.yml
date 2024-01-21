@@ -164,6 +164,7 @@ jekyll_get_json:
     cache: true
 
 sass:
+  sass_dir: _sass
   style: compressed
 
 compress_images:
