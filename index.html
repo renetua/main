@@ -26,7 +26,9 @@ navhide: 1
       <div class="card">
         <img src="/assets/images/locations/{{ image }}" width="538" height="220" class="card-img-top" alt="Нерухомість у {{ r.navtitle | replace_first: "о", "і" }}">
         <div class="card-body p-2">
-          <h3 class="card-title mb-2 h5">{{ r.subtitle }} {{ site.data.lang-uk.re_ta }} {{ title }}</h3>
+          <h3 class="card-title mb-2 h5">
+            <a href="{{ r.url }}">{{ r.subtitle }} {{ site.data.lang-uk.re_ta }} {{ title }}</a>
+          </h3>
           <div class="card-text">
             <nav class="navbar navbar-expand-lg navbar-light bg-white p-0">
               <div class="navbar-brand d-lg-none">
@@ -80,7 +82,7 @@ navhide: 1
                     {%- if forloop.last -%}
                       <div class="row">
                         <div class="col-auto ml-auto">
-                          <a class="btn btn-primary btn-sm" href="{{ r.url }}">Інші {{ site.data[d].size }} пропозиції нерухомості</a>
+                          <a class="btn btn-primary btn-sm" href="{{ r.url }}/region/{{ r.slug }}/">Інші {{ site.data[d].size }} пропозиції нерухомості</a>
                         </div>
                       </div>
                     {%- endif -%}
