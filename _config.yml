@@ -113,6 +113,9 @@ pagination:
 
 jekyll_get_json:
   # Get all
+  - data: ifua
+    json: 'https://www.realestate.if.ua/region/lvivska/data/all.json'
+    cache: true
   - data: inua
     json: 'https://www.realestate.in.ua/region/lvivska/data/all.json'
     cache: true
