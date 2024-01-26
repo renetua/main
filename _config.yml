@@ -114,7 +114,7 @@ pagination:
 jekyll_get_json:
   # Get all
   - data: teua
-    json: 'https://www.realestate.te.ua/region/ivano-frankivska/data/all.json'
+    json: 'https://www.realestate.te.ua/region/ternopilska/data/all.json'
     cache: true
   - data: ifua
     json: 'https://www.realestate.if.ua/region/ivano-frankivska/data/all.json'
