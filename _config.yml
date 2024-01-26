@@ -9,8 +9,8 @@ country: Україна
 region: Україна
 region_size: .89rem
 
-usd: 38.20
-eur: 41.66
+usd: 38.27
+eur: 41.73
 
 title: Мережа Вебсайтів Нерухомості
 keywords: житло, квартира, нерухомість продам будинок, продаю гараж, продаємо житло, здається квартира, продаж житла, оренда квартир, квартира подобово, продати будинок, продамо землю, земля продається, продаю квартиру, здаю житло
@@ -113,6 +113,9 @@ pagination:
 
 jekyll_get_json:
   # Get all
+  - data: teua
+    json: 'https://www.realestate.te.ua/region/ivano-frankivska/data/all.json'
+    cache: true
   - data: ifua
     json: 'https://www.realestate.if.ua/region/ivano-frankivska/data/all.json'
     cache: true
