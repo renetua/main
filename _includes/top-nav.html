@@ -7,10 +7,8 @@
 </div>
 <div class="col-auto order-1 order-lg-2 text-right">
   <div class="dropdown">
-      <a class="btn btn-success btn-sm mr-1" data-toggle="collapse" href="#collapseAreaSelect" role="button" aria-expanded="false" aria-controls="collapseAreaSelect" title="Місцевість де розташована нерухомість">Пошук місцевості</a>
-      <a href="#" class="btn btn-add btn-sm" role="button" data-toggle="dropdown" aria-expanded="false">
-        {{ site.data.lang-uk.add_realestate }}
-      </a>
+      <a class="btn btn-success btn-sm mr-1 font-weight-bold" data-toggle="collapse" href="#collapseAreaSelect" role="button" aria-expanded="false" aria-controls="collapseAreaSelect" title="Місцевість де розташована нерухомість">Пошук місцевості</a>
+      <a href="#" class="btn btn-add btn-sm" role="button" data-toggle="dropdown" aria-expanded="false">{{ site.data.lang-uk.add_realestate }}</a>
       <div class="dropdown-menu dropdown-menu-right">
         {%- assign regs = site.data.realestate | sort: 'navtitle' -%}
         {%- for reg in regs -%}
