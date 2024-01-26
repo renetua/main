@@ -7,4 +7,4 @@
 {%- include body-ads.html -%}
 {%- if offer.page and offer.page == '1' -%}{{ linkPage }}.
 {%- elsif offer.link and offer.link != '' -%}{{ linkPost }}.
-{%- else -%}{%- endif -%}
+{%- else -%}&nbsp;{%- include footer/phone.html legal=offer.phone type='dropdown' -%}{%- endif -%}
