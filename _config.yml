@@ -9,7 +9,7 @@ country: Україна
 region: Україна
 region_size: .89rem
 
-usd: 38.27
+usd: 38.26
 eur: 41.73
 
 title: Мережа Вебсайтів Нерухомості
@@ -113,6 +113,9 @@ pagination:
 
 jekyll_get_json:
   # Get all
+  - data: kyivua
+    json: 'https://www.realestate.kyiv.ua/region/kyivska/data/all.json'
+    cache: true
   - data: teua
     json: 'https://www.realestate.te.ua/region/ternopilska/data/all.json'
     cache: true
