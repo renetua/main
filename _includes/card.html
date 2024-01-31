@@ -1,12 +1,24 @@
-{%- assign more = site.data.lang-uk.re_more_ads | split: ',' | sample | append: site.data.lang-uk.re_ads -%}
+{%- assign more = site.data.uk.re_more_ads | split: ',' | sample | append: site.data.uk.re_ads -%}
 {%- assign c_location = offer.location | default: offer.region -%}
 {%- include price-name.html -%}
 {%- include price.html -%}
 {%- include start-ads.html -%}
+{%- assign type = offer.type | split: ' ' -%}
+{%- capture offerType -%}
+  {%- if type.size >= 2 -%}
+    {%- if offer.type contains ' в ' or offer.type contains ' від ' -%}
+      {{ type | slice: 0, 1 | join: ' ' }}
+    {%- else -%}
+      {{ type | slice: 0, 2 | join: ' ' }}
+    {%- endif -%}
+  {%- else -%}
+    {{ type | slice: 0 }}
+  {%- endif -%}
+{%- endcapture -%}
 <span class="sr-only"><data value="{{ offer.id }}">{% if offer.rent == '1' %}{{ site.data.uk.re_object_rent }}{% else %}{{ site.data.uk.re_object_sell }}{% endif %} - {{ offerType }}, {{ site.data.uk.re_cost }} {{ offer.price }}, {{ c_location }}</data></span>
 <h4 class="font-weight-normal m-0 p-0 h6">
 {%- if offer.page and offer.page == '1' -%}
-  <a href="{{ r.url }}/{{ offer.phone }}" target="_blank" aria-label="{{ site.data.lang-uk.re_page_ads }}">{%- include body-ads.html -%}</a>.
+  <a href="{{ r.url }}/{{ offer.phone }}" target="_blank" aria-label="{{ site.data.uk.re_page_ads }}">{%- include body-ads.html -%}</a>.
 {%- elsif offer.link and offer.link != '' -%}
   <a href="{{ offer.link | prepend: r.url }}" aria-label="{{ more }}">{%- include body-ads.html -%}</a>.
 {%- else -%}

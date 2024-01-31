@@ -9,14 +9,14 @@
 <span class="mr-1">&larr;</span>
 <a href="{{ back | slice: 0, size | join: "/" }}/">
   {%- if back contains "news" -%}
-    {{ site.data.lang-uk.news_back_list }}
+    {{ site.data.uk.news_back_list }}
   {%- elsif back contains "articles" -%}
-    {{ site.data.lang-uk.articles_back_list }}
+    {{ site.data.uk.articles_back_list }}
   {%- elsif back contains "docs" -%}
-    {{ site.data.lang-uk.docs_back_list }}
+    {{ site.data.uk.docs_back_list }}
   {%- elsif back contains "laws" -%}
-    {{ site.data.lang-uk.laws_back_list }}
+    {{ site.data.uk.laws_back_list }}
   {%- else -%}
-    {{ site.data.lang-uk.back_list }}
+    {{ site.data.uk.back_list }}
   {%- endif -%}
 </a>
