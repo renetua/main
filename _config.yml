@@ -9,8 +9,8 @@ country: Україна
 region: Україна
 region_size: .89rem
 
-usd: 38.25
-eur: 41.41
+usd: 38.44
+eur: 41.57
 
 title: Мережа Вебсайтів Нерухомості
 keywords: житло, квартира, нерухомість продам будинок, продаю гараж, продаємо житло, здається квартира, продаж житла, оренда квартир, квартира подобово, продати будинок, продамо землю, земля продається, продаю квартиру, здаю житло
@@ -136,6 +136,9 @@ jekyll_get_json:
     cache: true
   - data: cvua
     json: 'https://www.realestate.cv.ua/region/chernivetska/data/all.json'
+    cache: true
+  - data: khua
+    json: 'https://www.realestate.kh.ua/region/kharkivska/data/all.json'
     cache: true
   # Get options
   - data: kyiv
