@@ -177,9 +177,9 @@ jekyll_get_json:
   - data: cv
     json: 'https://www.realestate.cv.ua/region/data/options.json'
     cache: true
-  - data: vn
-    json: 'https://www.realestate.vn.ua/region/data/options.json'
-    cache: true
+  # - data: vn
+  #   json: 'https://www.realestate.vn.ua/region/data/options.json'
+  #   cache: true
 
 sass:
   sass_dir: _sass
