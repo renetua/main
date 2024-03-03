@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2024-03-03T22:59:37+02:00
+last_modified_at: 2024-03-03T23:01:37+02:00
 layout: default
 title: Оголошення про продаж і оренду нерухомості
 navhide: 1
@@ -88,7 +88,8 @@ navhide: 1
                     {%- endif -%}
                   {%- endfor -%}
                 {%- else -%}
-                  <div id="{{ region }}"></div>
+                  <div class="alert alert-success mb-0" role="alert"><a href="{{ r.url | replace_first: 'www', 'add' }}" class="alert-link">Додати&nbsp;оголошення</a> про {{ r.title | replace_first: "Н", "н" }}</div>
+                  {%- comment -%}<div id="{{ region }}"></div>{%- endcomment -%}
                 {%- endif -%}
               </div>
               <div class="tab-pane pt-3 fade show{% if r.slug and r.slug != '' %}{% else %} active{% endif %}" id="{{ region }}-about" role="tabpanel" aria-labelledby="{{ region }}-about-tab">
