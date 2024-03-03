@@ -1,45 +1,45 @@
 #
 # Region
 #
-- type: region
-  item: ivano-frankivska
-  name: Нерухомість у області
+# - type: region
+#   item: ivano-frankivska
+#   name: Нерухомість у області
 
 #
 # District
 #
-- type: district
-  item: ivano-frankivskyy
-  name: Нерухомість у районі
+# - type: district
+#   item: ivano-frankivskyy
+#   name: Нерухомість у районі
 
 #
 # District / Town
 #
-- type: town
-  item: tysmenytsya
-  name: Нерухомість у містечку
+# - type: town
+#   item: tysmenytsya
+#   name: Нерухомість у містечку
 
 #
 # Region / City
 #
-- type: city
-  item: ivano-frankivsk
-  name: Нерухомість у місті
+# - type: city
+#   item: ivano-frankivsk
+#   name: Нерухомість у місті
 
 #
 # Developers / Company
 #
 
-- type: developer
-  item: builder
-  name: Будівельна компанія
+# - type: developer
+#   item: builder
+#   name: Будівельна компанія
 
 #
 # Realtor / Agent
 #
-- type: realtor
-  item: mykhalchuk
-  name: Агент з нерухомості
+# - type: realtor
+#   item: mykhalchuk
+#   name: Агент з нерухомості
 
 #
 # Agency
