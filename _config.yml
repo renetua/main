@@ -143,9 +143,9 @@ jekyll_get_json:
   - data: zpua
     json: 'https://www.realestate.zp.ua/region/zaporizhzhska/data/all.json'
     cache: true
-  # - data: vnua
-  #   json: 'https://www.realestate.vn.ua/region/vinnytska/data/all.json'
-  #   cache: true
+  - data: vnua
+    json: 'https://www.realestate.vn.ua/region/vinnytska/data/all.json'
+    cache: true
   # Get options
   - data: kyiv
     json: 'https://www.realestate.kyiv.ua/region/data/options.json'
@@ -177,9 +177,9 @@ jekyll_get_json:
   - data: cv
     json: 'https://www.realestate.cv.ua/region/data/options.json'
     cache: true
-  # - data: vn
-  #   json: 'https://www.realestate.vn.ua/region/data/options.json'
-  #   cache: true
+  - data: vn
+    json: 'https://www.realestate.vn.ua/region/data/options.json'
+    cache: true
 
 sass:
   sass_dir: _sass
