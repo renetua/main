@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2024-04-03T23:48:28+02:00
+last_modified_at: 2024-04-11T19:19:47+02:00
 layout: default
 title: Оголошення про продаж і оренду нерухомості
 navhide: 1
@@ -8,11 +8,13 @@ navhide: 1
 <p>Кожен українець може безкоштовно подати запит та розмістити своє оголошення про продаж чи передачу в оренду своєї квартири, свого будинку, землі чи будь-яку іншу нерухомість, яка знаходиться в межах України у одному із нижче вказаних регіонів України.</p>
 {%- assign rs = site.data.realestate | sort: 'navtitle' -%}
 {% if page.url == "/" and page.url == '/' %}
+{%- comment -%}
 <div class="alert alert-danger mb-3 alert-dismissible fade show" role="alert">
   <p class="h5 mb-0">Слава Україні! Героям слава! Слава Збройним Силам України! Смерть ворогам! Україна понад усе!</p>
   <p class="mb-0">Відкритий воєнний напад московії (росії), за підтримки білорусі, на Україну, розпочатий о 5-ті годині ранку 24 лютого 2022 року. Вторгнення є частиною російсько-української війни, розв'язаної московією (росією) 2014 року, участь у якій московія (росія) постійно заперечувала.</p>
   <button type="button" class="close" data-dismiss="alert" aria-label="Закрити"><span aria-hidden="true">&times;</span></button>
 </div>
+{%- endcomment -%}
 {%- include navbarinfo.html -%}
 {%- endif -%}
 <div class="row row-cols-1 row-cols-md-2">
